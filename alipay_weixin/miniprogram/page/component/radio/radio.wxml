@@ -1,0 +1,21 @@
+<view  class="page">
+  <view  class="page-description">单选框</view>
+  <view  class="page-section">
+    <view  class="section section_gap">
+      <form  bindsubmit="onSubmit" bindreset="onReset">
+        <view  class="page-section-demo">
+          <radio-group  class="radio-group" bindchange="radioChange" name="lib">
+            <label  class="radio" wx:for="{{items}}" wx:key="item" key="label-{{index}}">
+              <radio  value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}"></radio>
+              <text  class="radio-text">{{item.value}}</text>
+            </label>
+          </radio-group>
+        </view>
+        <view  class="page-section-btns">
+          <view ><onekit_button  size="mini" type="ghost" formType="reset">reset</onekit_button></view>
+          <view ><onekit_button  size="mini" type="primary" formType="submit">submit</onekit_button></view>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

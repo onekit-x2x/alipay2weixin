@@ -1,0 +1,4 @@
+<view >
+    <lifestyle  wx:if="{{canUse}}" publicId="2016021701146995"></lifestyle>
+    <view  wx:else>请升级支付宝支持生活号跳转</view>
+</view>

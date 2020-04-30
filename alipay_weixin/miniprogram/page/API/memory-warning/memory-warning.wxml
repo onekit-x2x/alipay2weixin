@@ -1,0 +1,7 @@
+<view  class="page">
+
+  <onekit_button  type="primary" bindtap="onMemoryWarning">
+    开始监听内存不足告警
+  </onekit_button>
+
+</view>

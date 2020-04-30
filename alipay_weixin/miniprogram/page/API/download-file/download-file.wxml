@@ -1,0 +1,3 @@
+<view  class="container">
+  <onekit_button  bindtap="download">下载图片并显示</onekit_button>
+</view>
