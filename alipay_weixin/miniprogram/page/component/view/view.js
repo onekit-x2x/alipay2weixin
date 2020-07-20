@@ -11,4 +11,7 @@ Page({
   returnIndex() {
     my.switchTab({ url: '/page/tabBar/component/index' });
   },
+  onViewTap(e){
+    console.log("xx",e)
+  }
 });

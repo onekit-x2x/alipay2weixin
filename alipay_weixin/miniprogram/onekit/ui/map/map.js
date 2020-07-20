@@ -1,6 +1,9 @@
 import my from "../../../onekit/my"
 Component({
-  mixins: [],
+    options: {
+        styleIsolation: 'apply-shared'
+      },
+    mixins: [],
   data: {},
   props: {
     longitude: function(longitude) {

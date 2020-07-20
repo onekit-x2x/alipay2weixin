@@ -1,48 +1,48 @@
-<view  class="page">
-  <view  class="page-description">表单</view>
+<onekit-view  Class="page">
+  <onekit-view  Class="page-description">表单</onekit-view>
   <form  bindsubmit="onSubmit" bindreset="onReset">
-    <view  class="page-section">
-      <view  class="page-section-title">Slider</view>
-      <view  class="page-section-demo">
-        <slider  value="80" name="slider" show-value></slider>
-      </view>
-    </view>
-    <view  class="page-section">
-      <view  class="form-row">
-        <view  class="form-row-label">Switch</view>
-        <view  class="form-row-content" style="text-align: right">
-          <switch  name="switch"></switch>
-        </view>
-      </view>
-      <view  class="form-line"></view>
-      <view  class="form-row">
-        <view  class="form-row-label">Input</view>
-        <view  class="form-row-content">
-          <input  name="input" class="input" placeholder="input something"></input>
-        </view>
-      </view>
-    </view>
-    <view  class="page-section">
-      <view  class="page-section-title">Radio</view>
-      <view  class="page-section-demo">
-        <radio-group  name="radio-group">
-          <label ><radio  value="radio1"></radio>radio1</label>
-          <label ><radio  value="radio2"></radio>radio2</label>
-        </radio-group>
-      </view>
-    </view>
-    <view  class="page-section">
-      <view  class="page-section-title">Checkbox</view>
-      <view  class="page-section-demo">
-        <checkbox-group  name="checkbox">
-          <label ><onekit_checkbox  value="checkbox1"></onekit_checkbox>checkbox1</label>
-          <label ><onekit_checkbox  value="checkbox2"></onekit_checkbox>checkbox2</label>
-        </checkbox-group>
-      </view>
-      <view  class="page-section-btns">
-        <view ><onekit_button  type="ghost" size="mini" formType="reset">Reset</onekit_button></view>
-        <view ><onekit_button  type="primary" size="mini" formType="submit">Submit</onekit_button></view>
-      </view>
-    </view>
+    <onekit-view  Class="page-section">
+      <onekit-view  Class="page-section-title">Slider</onekit-view>
+      <onekit-view  Class="page-section-demo">
+        <onekit-slider  value="80" name="slider" show-value></onekit-slider>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="page-section">
+      <onekit-view  Class="form-row">
+        <onekit-view  Class="form-row-label">Switch</onekit-view>
+        <onekit-view  Class="form-row-content" style="text-align: right">
+          <onekit-switch name="switch"></onekit-switch>
+        </onekit-view>
+      </onekit-view>
+      <onekit-view  Class="form-line"></onekit-view>
+      <onekit-view  Class="form-row">
+        <onekit-view  Class="form-row-label">Input</onekit-view>
+        <onekit-view  Class="form-row-content">
+          <onekit-input  name="input" Class="input" placeholder="input something"></onekit-input>
+        </onekit-view>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="page-section">
+      <onekit-view  Class="page-section-title">Radio</onekit-view>
+      <onekit-view  Class="page-section-demo">
+        <onekit-radio-group  name="radio-group">
+          <onekit-label ><onekit-radio  value="radio1"></onekit-radio>radio1</onekit-label>
+          <onekit-label ><onekit-radio  value="radio2"></onekit-radio>radio2</onekit-label>
+        </onekit-radio-group>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="page-section">
+      <onekit-view  Class="page-section-title">Checkbox</onekit-view>
+      <onekit-view  Class="page-section-demo">
+        <onekit-checkbox-group  name="checkbox">
+          <onekit-label ><onekit-checkbox  value="checkbox1"></onekit-checkbox>checkbox1</onekit-label>
+          <onekit-label ><onekit-checkbox  value="checkbox2"></onekit-checkbox>checkbox2</onekit-label>
+        </onekit-checkbox-group>
+      </onekit-view>
+      <onekit-view  Class="page-section-btns">
+        <onekit-view ><onekit-button  type="ghost" size="mini" formType="reset">Reset</onekit-button></onekit-view>
+        <onekit-view ><onekit-button  type="primary" size="mini" formType="submit">Submit</onekit-button></onekit-view>
+      </onekit-view>
+    </onekit-view>
   </form>
-</view>
+</onekit-view>

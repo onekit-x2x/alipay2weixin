@@ -1,77 +1,77 @@
-<view  class="page">
-  <view  class="page-description">输入框</view>
-  <view  class="page-section">
-    <view  class="form-row">
-      <view  class="form-row-label">受控聚焦</view>
-      <view  class="form-row-content">
-        <input  class="input" focus="{{focus}}" bindfocus="onFocus" bindblur="onBlur" placeholder="input something"></input>
-      </view>
-    </view>
-    <view  class="page-section-btns">
-      <onekit_button  size="mini" bindtap="bindButtonTap">聚焦</onekit_button>
-    </view>
-  </view>
-  <view  class="page-section">
-    <view  class="form-row">
-      <view  class="form-row-label"><label  for="controlled">显示输入</label></view>
-      <view  class="form-row-content">
-        <input  class="input" id="controlled" bindinput="bindKeyInput" placeholder="show input content"></input>
-      </view>
-    </view>
-    <view  class="extra-info">你输入的是：{{inputValue}}</view>
-  </view>
-  <view  class="page-section">
-    <view  class="form-row">
-      <view  class="form-row-label">最大长度</view>
-      <view  class="form-row-content">
-        <input  class="input" maxlength="10" placeholder="maxlength 10"></input>
-      </view>
-    </view>
-    <view  class="form-line"></view>
-    <view  class="form-row">
-      <view  class="form-row-label">收起键盘</view>
-      <view  class="form-row-content">
-        <input  class="input" bindinput="bindHideKeyboard" placeholder="输入 123 自动收起键盘"></input>
-      </view>
-    </view>
-    <view  class="form-line"></view>
-    <view  class="form-row">
-      <view  class="form-row-label">输入密码</view>
-      <view  class="form-row-content">
-        <input  class="input" password type="text" placeholder="密码输入框"></input>
-      </view>
-    </view>
-    <view  class="form-line"></view>
-    <view  class="form-row">
-      <view  class="form-row-label">输入数字</view>
-      <view  class="form-row-content">
-        <input  class="input" type="number" placeholder="数字输入框"></input>
-      </view>
-    </view>
-    <view  class="form-line"></view>
-    <view  class="form-row">
-      <view  class="form-row-label">小数点键盘</view>
-      <view  class="form-row-content">
-        <input  class="input" type="digit" placeholder="带小数点的数字键盘"></input>
-      </view>
-    </view>
-    <view  class="form-line"></view>
-    <view  class="form-row">
-      <view  class="form-row-label">身份证键盘</view>
-      <view  class="form-row-content">
-        <input  class="input" type="idcard" placeholder="身份证输入键盘"></input>
-      </view>
-    </view>
-  </view>
+<onekit-view  Class="page">
+  <onekit-view  Class="page-description">输入框</onekit-view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">受控聚焦</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" focus="{{focus}}" bindfocus="onFocus" bindblur="onBlur" placeholder="input something"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="page-section-btns">
+      <onekit-button  size="mini" bindtap="bindButtonTap">聚焦</onekit-button>
+    </onekit-view>
+  </onekit-view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label"><onekit-label  for="controlled">显示输入</onekit-label></onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" id="controlled" bindinput="bindKeyInput" placeholder="show input content"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="extra-info">你输入的是：{{inputValue}}</onekit-view>
+  </onekit-view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">最大长度</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" maxlength="10" placeholder="maxlength 10"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="form-line"></onekit-view>
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">收起键盘</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" bindinput="bindHideKeyboard" placeholder="输入 123 自动收起键盘"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="form-line"></onekit-view>
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">输入密码</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" password type="text" placeholder="密码输入框"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="form-line"></onekit-view>
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">输入数字</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" type="number" placeholder="数字输入框"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="form-line"></onekit-view>
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">小数点键盘</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" type="digit" placeholder="带小数点的数字键盘"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view  Class="form-line"></onekit-view>
+    <onekit-view  Class="form-row">
+      <onekit-view  Class="form-row-label">身份证键盘</onekit-view>
+      <onekit-view  Class="form-row-content">
+        <onekit-input  Class="input" type="idcard" placeholder="身份证输入键盘"></onekit-input>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
 
 
-  <view  class="page-section">
-    <view  class="page-section-title">搜索框</view>
-    <view  class="page-section-demo">
-      <view  class="search-outer">
-        <input  class="search-input" placeholder="搜索" value="{{search}}" bindconfirm="doneSearch" bindinput="handleSearch"></input>
-        <text  class="search-cancel" bindtap="clearSearch">取消</text>
-      </view>
-    </view>
-  </view>
-</view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">搜索框</onekit-view>
+    <onekit-view  Class="page-section-demo">
+      <onekit-view  Class="search-outer">
+        <onekit-input  Class="search-input" placeholder="搜索" value="{{search}}" bindconfirm="doneSearch" bindinput="handleSearch"></onekit-input>
+        <text  Class="search-cancel" bindtap="clearSearch">取消</text>
+      </onekit-view>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

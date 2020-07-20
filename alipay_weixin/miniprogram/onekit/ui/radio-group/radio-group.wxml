@@ -1,0 +1,19 @@
+<!-- <view
+id="view_id"
+class="onekit-radio-group {{Class}}"
+style="{{Style}}"
+bindclick="radio_click"
+bindchange="radio_Change"
+name="{{name}}"
+>
+<slot></slot>
+</view> -->
+<radio-group
+class="onekit-radio-group {{Class}}"
+style="{{Style}}"
+name="{{name}}"
+bindchange="radio_Change"
+>
+<slot>
+</slot>
+</radio-group>

@@ -1,3 +1,5 @@
+.onekit-view>.onekit-view{background:blue}
+
 .red{
   background: red ;
   color: red ;

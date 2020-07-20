@@ -1,52 +1,53 @@
-<view  class="page">
-  <view  class="page-section">
-    <view  class="page-section-title">Checkbox</view>
-    <view  class="page-section-demo">
-      <checkbox-group >
-        <view >
-          <label >
-            <onekit_checkbox  value="AngularJS"></onekit_checkbox>
+<onekit-view  Class="page">
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">Checkbox</onekit-view>
+    <onekit-view  Class="page-section-demo">
+      <onekit-checkbox-group >
+        <onekit-view >
+          <onekit-label >
+            <onekit-checkbox  value="AngularJS"></onekit-checkbox>
             <text > AngularJS</text>
-          </label>
-        </view>
-        <view >
-          <label >
-            <onekit_checkbox  value="React"></onekit_checkbox>
+          </onekit-label>
+        </onekit-view>
+        <onekit-view >
+          <onekit-label >
+            <onekit-checkbox  value="React"></onekit-checkbox>
             <text > React</text>
-          </label>
-        </view>
-      </checkbox-group>
-    </view>
-  </view>
+          </onekit-label>
+        </onekit-view>
+      </onekit-checkbox-group>
+    </onekit-view>
+  </onekit-view>
 
-  <view  class="page-section">
-    <view  class="page-section-title">Radio</view>
-    <view  class="page-section-demo">
-      <radio-group >
-        <view >
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">Radio</onekit-view>
+    <onekit-view  Class="page-section-demo">
+      <onekit-radio-group >
+        <onekit-view >
           <radio  id="AngularJS" value="AngularJS"></radio>
-          <label  for="AngularJS">AngularJS</label>
-        </view>
-        <view >
+          <onekit-label  for="AngularJS">AngularJS</onekit-label>
+        </onekit-view>
+        <onekit-view >
           <radio  id="React" value="React"></radio>
-          <label  for="React">React</label>
-        </view>
-      </radio-group>
-    </view>
-  </view>
+          <onekit-label  for="React">React</onekit-label>
+        </onekit-view>
+      </onekit-radio-group>
+    </onekit-view>
+  </onekit-view>
 
-  <view  class="page-section">
-    <view  class="page-section-title">label中有多个 Checkbox ，点击后只选中一个</view>
-    <view  class="page-section-demo">
-      <label >
-        <onekit_checkbox >选中我</onekit_checkbox>
-        <onekit_checkbox >选不中</onekit_checkbox>
-        <onekit_checkbox >选不中</onekit_checkbox>
-        <onekit_checkbox >选不中</onekit_checkbox>
-        <view >
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">label中有多个 Checkbox ，点击后只选中一个</onekit-view>
+    <onekit-view  Class="page-section-demo">
+      <onekit-label >
+        <onekit-checkbox >选中我</onekit-checkbox>
+        <onekit-checkbox >选不中</onekit-checkbox>
+        <onekit-checkbox >选不中</onekit-checkbox>
+        <onekit-checkbox >选不中</onekit-checkbox>
+        <onekit-view >
           <text >Click Me</text>
-        </view>
-      </label>
-    </view>
-  </view>
-</view>
+        </onekit-view>
+      </onekit-label>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>
+

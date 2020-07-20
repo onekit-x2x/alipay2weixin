@@ -1,5 +1,6 @@
 import my from "../../../onekit/my"
 Page({
+
   data: {
     switch1: true,
   },

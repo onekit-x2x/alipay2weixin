@@ -1,125 +1,101 @@
-import onekit from "../onekit"
+import onekit from "../onekit";
 export default class CanvasContext {
-  constructor() {
-    this._actions = [];
-    this._path = [];
+  constructor(weixinCanvasContext) {
+    this.weixinCanvasContext = weixinCanvasContext;
   }
-  beginPath() {
-        this._actions = [];
-    this._path = [];
+  beginPath(a) {
+    return this.weixinCanvasContext.beginPath(a);
   }
 
   save() {
-    this._actions.push({ method: "save", data: [] });
+    return weixinCanvasContext.save();
   }
   restore() {
-    this._actions.push({ method: "restore", data: [] });
+    return this.weixinCanvasContext._actions.restore();
   }
   //
-    setGlobalAlpha(alpha) {
-    this._actions.push({ method: "setGlobalAlpha", data: [alpha] })
+  setGlobalAlpha(alpha) {
+    return this.weixinCanvasContext.setGlobalAlpha(alpha);
   }
   setFillStyle(color) {
-    color = onekit.color.fix(color);
-    this._actions.push({ method: "setFillStyle", data: ["normal", onekit.color.str2array(color)] })
+    return this.weixinCanvasContext.setFillStyle(color);
   }
   setStrokeStyle(color) {
-    color = onekit.color.fix(color);
-    this._actions.push({ method: "setStrokeStyle", data: ["normal", onekit.color.str2array(color)] })
+    return this.weixinCanvasContext.setStrokeStyle(color);
   }
-  setShadow(x, y, blur, color) {
-    color = onekit.color.fix(color);
-    this._actions.push({ method: "setShadow", data: [x, y, blur, onekit.color.str2array(color)] })
+  setShadow(offsetX, offsetY, blur, color) {
+    return this.weixinCanvasContext.setShadow(offsetX, offsetY, blur, color);
   }
-  setLineCap(cap) {
-    this._actions.push({ method: "setLineCap", data: [cap] });
+  setLineCap(lineCap) {
+    return this.weixinCanvasContext.setLineCap(lineCap);
   }
-  setLineJoin(join) {
-    this._actions.push({ method: "setLineJoin", data: [join] });
+  setLineJoin(lineJoin) {
+    return this.weixinCanvasContext.setLineJoin(lineJoin);
   }
-  setLineWidth(width) {
-    this._actions.push({ method: "setLineWidth", data: [width] });
+  setLineWidth(lineWidth) {
+    return this.weixinCanvasContext.setLineWidth(lineWidth);
   }
-  setMiterLimit(limit) {
-    this._actions.push({ method: "setMiterLimit", data: [limit] });
+  setMiterLimit(miterLimit) {
+    return this.weixinCanvasContext.setMiterLimit(miterLimit);
   }
-  setFontSize(size) {
-    this._actions.push({ method: "setFontSize", data: [size] });
+  setFontSize(fontSize) {
+    return this.weixinCanvasContext.setFontSize(fontSize);
 
   }
-  rotate(angle) {
-    this._actions.push({ method: "rotate", data: [angle] })
+  rotate(rotate) {
+    return this.weixinCanvasContext.rotate(rotate);
   }
-  scale(sx, sy) {
-    this._actions.push({ method: "scale", data: [sx, sy] });
+  scale(scaleWidth, scaleHeight) {
+    return this.weixinCanvasContext.scale(scaleWidth, scaleHeight);
   }
-  translate(tx, ty) {
-    this._actions.push({ method: "translate", data: [tx, ty] });
+  translate(x, y) {
+    return this.weixinCanvasContext.translate(x, y);
   }
   moveTo(x, y) {
-    this._path.push({ method: "moveTo", data: [x, y] });
+    return this.weixinCanvasContext.moveTo(x, y);
   }
   lineTo(x, y) {
-    this._path.push({ method: "lineTo", data: [x, y] });
+    return this.weixinCanvasContext.lineTo(x, y);
   }
   closePath() {
-    this._path.push({ method: "closePath", data: [] });
+    return this.weixinCanvasContext.closePath();
   }
-  fillText() {
-    var data = [];
-    for (var arg of arguments) {
-      data.push(arg);
-    }
-    this._actions.push({ method: "fillText", data: data });
+  fillText(text,x,y) {
+    return this.weixinCanvasContext.fillText(text,x,y,maxWidth);
   }
-  drawImage() {
-    var data = [];
-    for (var arg of arguments) {
-      data.push(arg);
-    }
-    this._actions.push({ method: "drawImage", data: data });
+  drawImage(imageResource,x,y,width,height) {
+    return this.weixinCanvasContext.drawImage(imageResource,sx,sy,sWidth,sHeight,dx,dy,dWidth,dHeight);
   }
-  arc() {
-    var data = [];
-    for (var arg of arguments) {
-      data.push(arg);
-    }
-    if(data.length<6){
-      data.push(false);
-    }
-    this._path.push({ method: "arc", data: data });
+  arc(x,y,r,sAngle,eAngle,counterclockwise) {
+    return this.weixinCanvasContext.arc(x,y,r,sAngle,eAngle,counterclockwise);
   }
-  quadraticCurveTo() {
-    var data = [];
-    for (var arg of arguments) {
-      data.push(arg);
-    }
-    this._path.push({ method: "quadraticCurveTo", data: data });
+  quadraticCurveTo(cpx,cpy,x,y) {
+    return this.weixinCanvasContext.quadraticCurveTo(cpx,cpy,x,y);
   }
-   bezierCurveTo() {
-    var data = [];
-    for (var arg of arguments) {
-      data.push(arg);
-    }
-    this._path.push({ method: "bezierCurveTo", data: data });
+  bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y) {
+    return this.weixinCanvasContext.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y);
   }
   //
   rect(x, y, width, height) {
-    this._path.push({ method: "rect", data: [x, y, width, height] });
+    return this.weixinCanvasContext.rect(x, y, width, height);
   }
   //
   clearRect(x, y, width, height) {
-    this._actions.push({ method: "clearRect", data: [x, y, width, height] });
+    return this.weixinCanvasContext.clearRect(x, y, width, height);
   }
   stroke() {
-    this._actions.push({ method: "strokePath", data: this._path });
+    return this.weixinCanvasContext.stroke();
   }
   fill() {
-    this._actions.push({ method: "fillPath", data: this._path });
+    return this.weixinCanvasContext.fill();
+  }
+  draw(reserve,callback) {
+    return this.weixinCanvasContext.draw(reserve,callback);
+  }
+  fillRect (x,y,width,height) {
+    return this.weixinCanvasContext.fillRect (x,y,width,height);
   }
   getActions() {
-    var actions = this._actions;
-    this._actions = [];
-    return actions;
+    return this.weixinCanvasContext.getActions();
   }
 }

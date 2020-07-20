@@ -1,5 +1,9 @@
 import my from "../../../onekit/my"
 Component({
+  behaviors: ['wx://form-field-button'],
+  options: {
+    styleIsolation: 'apply-shared'
+  },
   attached() { 
     // var openType;
     // var scope;
@@ -10,6 +14,8 @@ Component({
   },
   detached() { },
   properties: { 
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
     size: { type: String, value:"default"},
     type: { type: String, value: "default" },
     plain: { type: Boolean, value: false },
@@ -19,7 +25,7 @@ Component({
     "hover-start-time": { type: Boolean, value: 20 },
     "hover-stay-time": { type: Number, value: 70 },
     "hover-stop-propagation": { type: Boolean, value: false },
-    "form-type": { type: String, value: '' },
+    formType:{ type: String, value: '' },
     "open-type": { type: String, value: '' },
     scope: { type: String, value: '' },
     "app-parameter": { type: String, value: '' },

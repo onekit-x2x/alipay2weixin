@@ -5,7 +5,7 @@
     <view  class="page-section-demo icon-list">
       <block  wx:for="{{iconType}}" wx:key="item">
         <view  class="item">
-          <onekit_icon  type="{{item}}" aria-label="{{item}}" size="45"></onekit_icon>
+          <onekit-icon  type="{{item}}" aria-label="{{item}}" size="45"></onekit-icon>
           <text >{{item}}</text>
         </view>
       </block>
@@ -17,7 +17,7 @@
     <view  class="page-section-demo icon-list">
       <block  wx:for="{{iconSize}}" wx:key="item">
         <view  class="item">
-          <onekit_icon  type="success" size="{{item}}"></onekit_icon>
+          <onekit-icon  type="success" size="{{item}}"></onekit-icon>
           <text >{{item}}</text>
         </view>
       </block>
@@ -29,7 +29,7 @@
     <view  class="page-section-demo icon-list">
       <block  wx:for="{{iconColor}}" wx:key="item">
         <view  class="item">
-          <onekit_icon  type="success" size="45" color="{{item}}"></onekit_icon>
+          <onekit-icon  type="success" size="45" color="{{item}}"></onekit-icon>
           <text  style="color:{{item}}">{{item}}</text>
         </view>
       </block>

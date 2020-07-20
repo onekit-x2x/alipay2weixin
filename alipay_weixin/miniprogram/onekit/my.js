@@ -1,10 +1,12 @@
 import CanvasContext from "./api/CanvasContext"
+import VideoContext from "./api/VideoContext"
+import Context from "./api/Context"
 import wx_cloud from "./my.cloud"
 import onekit from "./onekit"
 export default class my {
-  static triggerEvent(THIS,eventName, data){
+  static triggerEvent(THIS, eventName, data) {
     eventName = onekit.firstUpper(eventName);
-    return THIS.props["on"+eventName](data);
+    return THIS.props["on" + eventName](data);
   }
   /////////////////// animation //////////////////////////
   static createAnimation(object) {
@@ -13,8 +15,8 @@ export default class my {
 
   ///////////////// basic ////////////////////////////////
   static canIUse(string) { return wx.canIUse(string); }
-  static getSystemInfo(object) {return wx.getSystemInfo(object);}
-  static getSystemInfoSync(object) { return (wx.getSystemInfoSync(object));}
+  static getSystemInfo(object) { return wx.getSystemInfo(object); }
+  static getSystemInfoSync(object) { return (wx.getSystemInfoSync(object)); }
   static base64ToArrayBuffer(base64) {
     base64 = base64.replace(/\s/g, '+');
     let commonContent = Buffer.from(base64, 'base64');
@@ -36,12 +38,12 @@ export default class my {
   static onAppHide(object) { return wx.onAppHide(object); }
   static setEnableDebug(object) { return wx.setEnableDebug(object); }
   static getLogManager(object) { return wx.getLogManager(object); }
-  static rsa(Object ) { return /*wx.esa(object)*/ console.log("暂不支持"); }
+  static rsa(Object) { return /*wx.esa(object)*/ console.log("暂不支持"); }
   /////////////////// Canvas ///////////////////
   static drawCanvas(object) {
     var canvasId = object.canvasId;
     var actions = object.actions;
-    var canvasContext = wx.createCanvasContext(canvasId);
+    var canvasContext = wx.createCanvasContext(id);
     for (var action of actions) {
       var data = action.data;
       switch (action.method) {
@@ -125,17 +127,20 @@ export default class my {
     canvasContext.draw();
   }
   static createContext() {
-    var context = new CanvasContext();
+    var context = new Context();
     return context;
   }
-  static createCanvasContext(object) {
-    return wx.createCanvasContext(object);
+  static createCanvasContext(id) {
+    return new CanvasContext(wx.createCanvasContext(id));
+  }
+  static createVideoContext(videoId) {
+    return new VideoContext(wx.createVideoContext(videoId));
   }
   static canvasToTempFilePath(object) {
     var object2 = {
       canvasId: object.canvasId
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       var result = {
         errMsg: "canvasToTempFilePath:ok",
         tempFilePath: res.apFilePath
@@ -147,7 +152,7 @@ export default class my {
         object["complete"](res);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -176,7 +181,7 @@ export default class my {
   static setNavigationBar(object) { return wx.setNavigationBarTitle(object); };
   //
   static onAccelerometerChange(callback) {
-    wx.onAccelerometerChange(function(res) {
+    wx.onAccelerometerChange(function (res) {
       if (wx._stopAccelerometer) {
         return;
       }
@@ -220,7 +225,7 @@ export default class my {
   }
   static getBatteryInfo(object) {
     var object2 = {}
-    object2.success = function(res) {
+    object2.success = function (res) {
       var result = {
         errMsg: "getBatteryInfo:ok",
         isCharging: false,
@@ -229,7 +234,7 @@ export default class my {
       if (object.success) { object.success(result); }
       if (object.fail) { object.fail(result); }
     },
-      object2.fail = function(res) {
+      object2.fail = function (res) {
         if (object.success) { object.success(res); }
         if (object.fail) { object.fail(res); }
       }
@@ -243,12 +248,12 @@ export default class my {
       for (var key in object) {
         switch (key) {
           case "success":
-            object2["success"] = function(res) {
+            object2["success"] = function (res) {
               object[key]({ text: res.data });
             };
             break;
           case "complete":
-            object2["complete"] = function(res) {
+            object2["complete"] = function (res) {
               if (res.text) {
                 res = { text: res.data };
               }
@@ -281,7 +286,7 @@ export default class my {
     return wx.setClipboardData(object2);
   }
   static onCompassChange(callback) {
-    wx.onCompassChange(function(res) {
+    wx.onCompassChange(function (res) {
       if (wx._stopCompass) {
         return;
       }
@@ -312,7 +317,7 @@ export default class my {
     var result = {
       errMsg: errMsg
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       result.errMsg = "addPhoneContact:ok"
       if (object.success) {
         object["success"](result);
@@ -321,7 +326,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       result.errMsg = "addPhoneContact:fail cancel"
       if (object.fail) {
         object["fail"](result);
@@ -333,7 +338,7 @@ export default class my {
     return wx.addPhoneContact(object2);
   }
   static onGyroscopeChange(callback) {
-    wx.onGyroscopeChange(function(res) {
+    wx.onGyroscopeChange(function (res) {
       if (wx._stopGyroscope) {
         return;
       }
@@ -364,7 +369,7 @@ export default class my {
   static startDeviceMotionListening(object) { return wx.startDeviceMotionListening(object); }
   static startDeviceMotionListening(object) { return wx.startDeviceMotionListening(object); }
   //
-  static getNetworkType = function(object) {
+  static getNetworkType = function (object) {
     var object2 = {};
     for (var key in object) {
       switch (key) {
@@ -377,7 +382,7 @@ export default class my {
           break;
       }
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       var result = { networkType: my._network(res).networkType };
       if (object.success) {
         object["success"](result);
@@ -386,7 +391,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -396,11 +401,11 @@ export default class my {
     }
     return wx.getNetworkType(object2);
   }
-  static _network = function(res) {
+  static _network = function (res) {
     var networkType;
     if (res.networkAvailable) {
       switch (res.networkType) {
-        case "WWAN": 
+        case "WWAN":
           networkType = "WIFI";
           break;
         default:
@@ -412,15 +417,15 @@ export default class my {
     }
     return { isConnected: res.networkAvailable, networkType: networkType.toLowerCase() };
   }
-  static onNetworkStatusChange = function(callack) {
-    wx.onNetworkStatusChange(function(res) {
+  static onNetworkStatusChange = function (callack) {
+    wx.onNetworkStatusChange(function (res) {
       callack(wx._network(res));
     });
   }
 
 
   //
-  static makePhoneCall = function(object) {
+  static makePhoneCall = function (object) {
     var object2;
     if (object) {
       object2 = {};
@@ -439,7 +444,7 @@ export default class my {
     }
   }
 
-  static scan = function(object) {
+  static scan = function (object) {
     var object2;
     if (object) {
       object2 = {};
@@ -460,7 +465,7 @@ export default class my {
             break;
         }
       }
-      object2.success = function(res) {
+      object2.success = function (res) {
         var result = {};
         if (res.result) {
           result.charSet = "UTF-8";
@@ -478,7 +483,7 @@ export default class my {
           object.complete(result);
         }
       }
-      object2.fail = function(res) {
+      object2.fail = function (res) {
         if (object.fail) {
           object.fail(res);
         }
@@ -490,10 +495,10 @@ export default class my {
     return wx.scanCode(object2);
   }
   //
-  static vibrate (object) {return console.log("此功能尚未开放")}
+  static vibrate(object) { return console.log("此功能尚未开放") }
   static vibrateLong(object) {
     var object2 = {}
-    object2.success = function(res) {
+    object2.success = function (res) {
       var result = {
         errMsg: "vibrateLong:ok"
       }
@@ -508,7 +513,7 @@ export default class my {
   }
   static vibrateShort(object) {
     var object2 = {}
-    object2.success = function(res) {
+    object2.success = function (res) {
       var result = {
         errMsg: "vibrateShort:ok"
       }
@@ -534,10 +539,10 @@ export default class my {
   static getBLEDeviceCharacteristics(object) { return wx.getBLEDeviceCharacteristics(object); }
   static createBLEConnection(object) { return wx.createBLEConnection(object); }
   static closeBLEConnection(object) { return wx.closeBLEConnection(object); }
-  static offBLECharacteristicValueChange(callback) { return wx.offBLECharacteristicValueChange(callback);} 
-  static offBluetoothAdapterStateChange(callback) { return wx.offBluetoothAdapterStateChange(callback);}
-  static onBLEConnectionStateChanged(callback) { return wx.onBLEConnectionStateChanged(callback);}
-  static offBLEConnectionStateChanged(callback) { return wx.offBLEConnectionStateChange(callback);}
+  static offBLECharacteristicValueChange(callback) { return wx.offBLECharacteristicValueChange(callback); }
+  static offBluetoothAdapterStateChange(callback) { return wx.offBluetoothAdapterStateChange(callback); }
+  static onBLEConnectionStateChanged(callback) { return wx.onBLEConnectionStateChanged(callback); }
+  static offBLEConnectionStateChanged(callback) { return wx.offBLEConnectionStateChange(callback); }
   //
   static stopBluetoothDevicesDiscovery(object) {
     var object2 = {};
@@ -555,9 +560,10 @@ export default class my {
     return wx.stopBluetoothDevicesDiscovery(object2);
   }
   static startBluetoothDevicesDiscovery(object) {
-   return wx.openBluetoothAdapter(object)}
+    return wx.openBluetoothAdapter(object)
+  }
   static openBluetoothAdapter(object) {
-    
+
     return wx.openBluetoothAdapter(object);
   }
   static onBluetoothDeviceFound(object) { return wx.onBluetoothDeviceFound(object); }
@@ -565,7 +571,7 @@ export default class my {
   static getConnectedBluetoothDevices(object) { return wx.getConnectedBluetoothDevices(object); }
   static getBluetoothDevices(object) {
     var object2 = {}
-    object2.success = function(res) {
+    object2.success = function (res) {
       wx.getBluetoothDevices({
         success: (res) => {
           // console.log("000", res)
@@ -579,7 +585,7 @@ export default class my {
       if (object.success) { object["success"](result) }
       if (object.complete) { object["complete"](result) }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.success) { object["success"](res) }
       if (object.complete) { object["complete"](res) }
     }
@@ -588,8 +594,8 @@ export default class my {
   static getBluetoothAdapterState(object) { return wx.getBluetoothAdapterState(object); }
   static closeBluetoothAdapter(object) { return wx.closeBluetoothAdapter(object); }
   //
-  static connectBLEDevice(object) { return wx.createBLEConnection(object);}
-  static disconnectBLEDevice(object) { return wx.closeBLEConnection(object)}
+  static connectBLEDevice(object) { return wx.createBLEConnection(object); }
+  static disconnectBLEDevice(object) { return wx.closeBLEConnection(object) }
   //
   static stopHCE(object) { return wx.stopHCE(object); }
   static startHCE(object) { return wx.startHCE(object); }
@@ -603,7 +609,7 @@ export default class my {
       object2 = {};
       for (var key in object) {
         switch (key) {
-          case "brightness": 
+          case "brightness":
             object2["value"] = object[key];
             break;
           default:
@@ -617,7 +623,7 @@ export default class my {
   static setKeepScreenOn(object) { return wx.setKeepScreenOn(object); }
   static onUserCaptureScreen(object) { return wx.onUserCaptureScreen(object); }
   static offUserCaptureScreen(callback) { return wx.offUserCaptureScreen(callback); }
-  static watchShake(object) { return /*wx.watchShake*/console.log("暂不支持")}
+  static watchShake(object) { return /*wx.watchShake*/console.log("暂不支持") }
   static getServerTime(object) { return /*wx.getServerTime*/console.log("暂不支持") }
   //
   static getScreenBrightness(object) {
@@ -636,8 +642,8 @@ export default class my {
         }
       }
     }
-    object2.success = function(res) {
-      var result = { brightness : res.value };
+    object2.success = function (res) {
+      var result = { brightness: res.value };
       if (object.success) {
         object["success"](result);
       }
@@ -645,7 +651,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -705,7 +711,7 @@ export default class my {
     wx.saveFile({
       tempFilePath: object.apFilePath,
       success(res) {
-        var result = { savedFilePath: res.savedFilePath};
+        var result = { savedFilePath: res.savedFilePath };
         if (object.success) {
           object.success(result);
         }
@@ -729,7 +735,7 @@ export default class my {
   ////////// Media ////////////////////
   static createMapContext(object) { return wx.createMapContext(object) }
   static compressImage(object) { return wx.compressImage(object) }
-  static saveImage (object) { return wx.saveImageToPhotosAlbum(object) }
+  static saveImage(object) { return wx.saveImageToPhotosAlbum(object) }
   static getImageInfo(object) { return wx.getImageInfo(object) }
   static previewImage(object) { return wx.previewImage(object) }
   static chooseImage(object) {
@@ -807,7 +813,7 @@ export default class my {
             break;
         }
       }
-      object2.success = function(res) {
+      object2.success = function (res) {
         var result = {
           headers: res.header
         };
@@ -831,7 +837,7 @@ export default class my {
           object.complete(result);
         }
       }
-      object2.fail = function(res) {
+      object2.fail = function (res) {
         if (object.fail) {
           object.fail(res);
         }
@@ -842,12 +848,12 @@ export default class my {
     }
     return wx.request(object2);
   }
-   
+
   static httpRequest(object) { return /*wx.httpRequest(object)*/console.log("暂不支持") }
-  static downloadFile(object) { 
+  static downloadFile(object) {
     wx.downloadFile({
       url: object.url,
-      header:object.header,
+      header: object.header,
       success: object.success,
       fail: object.fail,
       complete: object.complete,
@@ -875,12 +881,12 @@ export default class my {
         }
       }
     });
-   }
+  }
   static uploadFile(object) {
     wx.uploadFile({
       url: object.url,
       filePath: object.filePath,
-      name:object.fileName,
+      name: object.fileName,
       fileType: "image",
       header: object.header,
       formData: object.formData,
@@ -919,49 +925,35 @@ export default class my {
   static offLocalServiceFound(callback) { return wx.offLocalServiceFound(callback); }
   static offLocalServiceDiscoveryStop(callback) { return wx.offLocalServiceDiscoveryStop(callback); }
   ///////// Open Interface //////////
-  static checkSession(object) {
-    var object2 = {};
+  static _checkSession() {
     var now = new Date().getTime();
-    if (wx._sessoion && now - wx._sessoion <= 7200 * 1000) {
-      var result = { errMsg: "checkSession:ok" };
-      if (object.success) {
-        object.success(result);
-      }
-      if (object.complete) {
-        object.complete(result);
-      }
-    } else {
-      var res = { errMsg: "checkSession:fail" };
-      if (object.fail) {
-        object.fail(res);
-      }
-      if (object.complete) {
-        object.complete(res);
-      }
-    }
-    return wx.authorize(object2);
+    return getApp().onekitwx._jscode && getApp().onekitwx._login && now <= getApp().onekitwx._login + 1000 * 60 * 60;
   }
 
-  static login = function(object) {
+  static getAuthCode = function (object) {
     var that = this;
     if (!object) {
-      return wx.authorize(object);
+      return wx.login(object);
     }
     var object2 = {
       scopes: "auth_user"
     };
-    object2.success = function(res) {
-      wx._sessoion = new Date().getTime();
-      getApp().onekit.jscode = res.authCode;
-      var result = { code: res.authCode };
+    object2.success = function (res) {
+      getApp().onekitwx._login = new Date().getTime();
+      getApp().onekitwx._jscode = res.code;
+      var result = { authCode: res.code };
+
       if (object.success) {
         object.success(result);
       }
       if (object.complete) {
         object.complete(complete);
       }
+      // if(!getApp().onekitwx.hasuserinfo){
+      my._getUserInfo(result);
+      // }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object.fail(res);
       }
@@ -969,51 +961,97 @@ export default class my {
         object.complete(res);
       }
     }
-    return wx.authorize(object2);
-  };
-  static getUserInfo(object) {
-    function getUserInfo(jscode, object) {
-      wx.getAuthUserInfo({
-        success(res) {
-          var url = getApp().onekit.server + "userinfo";
-          wx.httpRequest({
-            url: url,
-            header: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            method: "POST",
-            data: {
-              nickname: res.nickName,
-              avatarUrl: res.avatar,
-              js_code: jscode
-            },
-            success(res) {
-              if (object.success) {
-                object.success(res.data);
-              }
-              if (object.complete) {
-                object.complete(res.data);
-              }
-            }, fail(res) {
-              console.log(res.data);
-            }
-          });
-        }
-      });
+    if (my._checkSession()) {
+      object2.success({ code: getApp().onekitwx._jscode });
+    } else {
+      wx.login(object2);
     }
 
-    var jscode = getApp().onekit.jscode;
-    if (jscode) {
-      getUserInfo(jscode, object);
-    } else {
-      wx.login({
-        success: (res) => {
-          getUserInfo(res.code, object);
-        },
-      });
-    }
   };
-  static getOpenData = function(object) {
+  static getOpenUserInfo(object) {
+    getApp().onekitwx.getuserinfo = (data, callback) => {
+      console.log(data);
+      //
+      // { "response": { "code": "10000", "msg": "Success", "avatar": "https:\/\/tfs.alipayobjects.com\/images\/partner\/TB1domvbyRADuNkUuBbXXcvopXa", "city": "成都市", "countryCode": "CN", "gender": "m", "nickName": "安好", "province": "四川省" } }
+      var gender;
+      if (data.userInfo.gender == 1) {
+        gender = "m"
+      } else if (data.userInfo.gender == 2) {
+        gender = "f";
+      } else {
+        gender = "t";
+      }
+      var res = {
+        code: "10000",
+        msg: "Success",
+        avatar: data.userInfo.avatarUrl,
+        city: data.userInfo.city,
+        countryCode: "CN",
+        gender: gender,
+        nickName: data.userInfo.nickName,
+        province: data.userInfo.province
+      };
+      var response = {
+        response: res
+      }
+      var result = {
+        response: JSON.stringify(response)
+      };
+      callback(res);
+      if (object.success) {
+        object.success(res);
+      }
+      if (object.complete) {
+        object.complete(res);
+      }
+    }
+    wx.navigateTo({
+      url: '/onekitwx/page/getuserinfo/getuserinfo'
+    })
+  };
+
+  static _getUserInfo(object) {
+    getApp().onekitwx.getuserinfo = (data, callback) => {
+      var code = getApp().onekitwx._jscode;
+      var url = getApp().onekitwx.server + "userinfo";
+      wx.request({
+        url: url,
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        data: {
+          code,
+          data: JSON.stringify(data)
+        },
+        success(res) {
+          console.log(res);
+          // if(object.success){
+          //   object.sccess(res);
+          // }
+          // if(object.complete){
+          //   object.complete(res);
+          // }
+          callback();
+        },
+        fail(res) {
+          // console.log(res);
+          // if (object.fail) {
+          //   object.fail(res);
+          // }
+          // if (object.complete) {
+          //   object.complete(res);
+          // }
+          callback();
+        }
+      })
+
+    }
+    wx.navigateTo({
+      url: '/onekitwx/page/getuserinfo/getuserinfo'
+    })
+  };
+  static getOpenData = function (object) {
     function success(opendata) {
       var opendata = opendata.userInfo;
       getApp().onekit.opendata = opendata;
@@ -1069,54 +1107,53 @@ export default class my {
     })
 
   };
-  static getPhoneNumber = function(object) {
-    function getPhoneNumber(jscode, object) {
-      wx.getPhoneNumber({
-        success(res) {
-          //var response = {
-          // response: "ZOELfBOrmRHNNiiVR4FmNrvV7Dmog5w/KFaNrfLugkDqdkPzlxBCzmfLBrtQlPptWix+1f9I07p5xNfwGgTgVA==",
-          // sign: "fD6CyFQeJTTgtM1uviy5uAm4YWiN3s0crGtD1v5XdXuDzFEBPTRYqGODcfzskAMFWNXJAK5Zx0/kk+6e9tn/N3U9RcrTgc6VLw7HM9fPTcz8CzVl1+b6fjsi0wWsADF53vKTurFn6HTSTEJvzbMMD5M2lgazni72tZHCNJSkeG1W+kjX/Mj5tfJXNkn6nlrtu1N6BxgsZdgDdkMQfIrWv2TOFlpx043LMBmk4CxXLpGvRfRcHLjixs5wEO1dfqENn6oj9hAQbPA8itYW4TvGlo5qhnzT+ya1rWcKrjn4zh7uvnr0hB0oPiqLu17txS5uIQIF0DJ2cC0k6kuOQLVwTQ=="
-          // }
-          //  JSON.parse(res.response);
-          var response = JSON.parse(res.response);
-          console.log(response);
-          var url = getApp().onekit.server + "phonenumber";
-          wx.httpRequest({
-            url: url,
-            header: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            method: "POST",
-            data: {
-              response: response.response,
-              sign: response.sign,
-              js_code: jscode
-            },
-            success(res) {
-              var data = res.data;
-              if (object.success) {
-                object.success(data);
-              }
-              if (object.complete) {
-                object.complete(data);
-              }
-            }, fail(res) {
-              console.log(res.data);
-            }
-          });
-        }
-      });
-    }
-    var jscode = getApp().onekit.jscode;
-    if (jscode) {
-      getPhoneNumber(jscode, object);
-    } else {
-      wx.login({
-        success: (res) => {
-          getPhoneNumber(res.code, object);
+  static getPhoneNumber(object) {
+
+    getApp().onekitwx.getphonenumber = (data, callback) => {
+      console.log(data);
+      var code = getApp().onekitwx._jscode;
+      var url = getApp().onekitwx.server + "phonenumber";
+      wx.request({
+        url: url,
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-      });
+        method: 'POST',
+        data: {
+          code,
+          encryptedData: data.encryptedData,
+          iv: data.iv
+        },
+        success(res) {
+          console.log(res);
+
+          var result = {
+            response: JSON.stringify(res.data)
+          };
+          if (object.success) {
+            object.success(result);
+          }
+          if (object.complete) {
+            object.complete(result);
+          }
+          callback();
+        },
+        fail(res) {
+          console.log(res);
+          if (object.fail) {
+            object.fail(res);
+          }
+          if (object.complete) {
+            object.complete(res);
+          }
+          callback();
+        }
+      })
+
     }
+    wx.navigateTo({
+      url: '/onekitwx/page/getphonenumber/getphonenumber'
+    })
   };
   static navigateToMiniProgram(object) { return wx.navigateToMiniProgram(object) }
   static navigateBackMiniProgram(object) { return wx.navigateBackMiniProgram(object) }
@@ -1124,16 +1161,47 @@ export default class my {
 
   static reportMonitor(object) { return wx.reportMonitor(object) }
   static reportAnalytics(object) { return wx.reportAnalytics(object) }
-  static requestPayment(object) {
-    var tradeNO = object.package.split("=")[1];
-    console.log(tradeNO);
-    var object2 = {
-      tradeNO: tradeNO,
-      success: object.success,
-      fail: object.fail,
-      complete: object.complete
-    };
-    return wx.tradePay(object2);
+  static tradePay(object) {
+    var trade_no = object.tradeNO;
+    var url = getApp().onekitwx.server + "orderinfo";
+    wx.request({
+      url: url,
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data: {
+        trade_no
+      },
+      success(res) {
+        console.log(res);
+        wx.requestPayment({
+          timeStamp: res.data.timeStamp,
+          nonceStr: res.data.nonceStr,
+          package: res.data.package,
+          signType: res.data.signType,
+          paySign: res.data.paySign,
+          success(res) {
+            console.log(res);
+            if (object.success) {
+              object.success(res);
+            }
+            if (object.complete) {
+              object.complete(res);
+            }
+          }
+        })
+      },
+      fail(res) {
+        if (object.fail) {
+          object.fail(res);
+        }
+        if (object.complete) {
+          object.complete(res);
+        }
+      }
+    })
+
   };
   static authorize(object) { return wx.authorize(object) }
   static openSetting(object) { return wx.openSetting(object) }
@@ -1148,7 +1216,7 @@ export default class my {
       object.complete();
     }
   };
-  static addCard = function(object) {
+  static addCard = function (object) {
     var url = getApp().onekit.server + "addcard";
     wx.httpRequest({
       url: url,
@@ -1196,10 +1264,10 @@ export default class my {
         console.log("success")
         console.log(res.data);
       },
-      fail: function(res) {
+      fail: function (res) {
         console.log(res);
       },
-      complete: function(res) {
+      complete: function (res) {
         console.log(res)
       }
 
@@ -1221,7 +1289,7 @@ export default class my {
             break;
         }
       }
-      object2.success = function(res) {
+      object2.success = function (res) {
         if (object.success) {
           object["success"](result);
         }
@@ -1229,7 +1297,7 @@ export default class my {
           object["complete"](result);
         }
       }
-      object2.fail = function(res) {
+      object2.fail = function (res) {
         if (object.fail) {
           object["success"](res);
         }
@@ -1256,7 +1324,7 @@ export default class my {
         }
       }
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       if (object.success) {
         object["success"](result);
       }
@@ -1264,7 +1332,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -1290,7 +1358,7 @@ export default class my {
         }
       }
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       if (object.success) {
         object["success"](result);
       }
@@ -1298,7 +1366,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -1324,7 +1392,7 @@ export default class my {
         }
       }
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       if (object.success) {
         object["success"](result);
       }
@@ -1332,7 +1400,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -1358,7 +1426,7 @@ export default class my {
         }
       }
     }
-    object2.success = function(res) {
+    object2.success = function (res) {
       if (object.success) {
         object["success"](result);
       }
@@ -1366,7 +1434,7 @@ export default class my {
         object["complete"](result);
       }
     }
-    object2.fail = function(res) {
+    object2.fail = function (res) {
       if (object.fail) {
         object["success"](res);
       }
@@ -1388,13 +1456,13 @@ export default class my {
   /////////////// Storage //////////////
   static getStorageInfoSync(object) { return wx.getStorageInfoSync(object) }
   static getStorageInfo(object) { return wx.getStorageInfo(object) }
-  static clearStorageSync(object) { wx.clearStorageSync(object); return{};}
+  static clearStorageSync(object) { wx.clearStorageSync(object); return {}; }
   static clearStorage(object) { return wx.clearStorage(object) }
-  static removeStorageSync(object) {wx.removeStorageSync(object.key);return{}; }
+  static removeStorageSync(object) { wx.removeStorageSync(object.key); return {}; }
   static removeStorage(object) { return wx.removeStorage(object) }
-  static setStorageSync(object) { wx.setStorageSync(object.key,object.data); return {};}
+  static setStorageSync(object) { wx.setStorageSync(object.key, object.data); return {}; }
   static setStorage(object) { return wx.setStorage(object) }
-  static getStorageSync(object) {return {data: wx.getStorageSync(object.key)};}
+  static getStorageSync(object) { return { data: wx.getStorageSync(object.key) }; }
   static getStorage(object) { return wx.getStorage(object) }
   ////////////// UI ////////////////
   static showActionSheet(object) {
@@ -1405,13 +1473,13 @@ export default class my {
         switch (key) {
           case "items":
             object2["itemList"] = object[key];
-            break; 
+            break;
           default:
             object2[key] = object[key];
             break;
         }
       }
-      object2.success = function(res) {
+      object2.success = function (res) {
         var result = { tapIndex: res.index };
         if (object.success) {
           object.success(result);
@@ -1436,10 +1504,10 @@ export default class my {
       object2 = {};
       for (var key in object) {
         switch (key) {
-          case "content": 
+          case "content":
             object2["title"] = object[key];
             break;
-          case "type": 
+          case "type":
             object2["icon"] = object[key];
             break;
           default:
@@ -1450,8 +1518,8 @@ export default class my {
     }
     return wx.showLoading(object2)
   }
-  static SDKVersion(string) {return consloe.log("不支持此功能")}
-  static hideToast(object) {return wx.hideToast(object)}
+  static SDKVersion(string) { return consloe.log("不支持此功能") }
+  static hideToast(object) { return wx.hideToast(object) }
   static showToast(object) {
     var object2;
     if (object) {
@@ -1475,7 +1543,7 @@ export default class my {
     }
     return wx.showToast(object2);
   }
-  static confirm (object2) {
+  static confirm(object2) {
     if (object2 == null) {
       return wx.showModal();
     }
@@ -1484,10 +1552,10 @@ export default class my {
       object = {};
       for (var key in object2) {
         switch (key) {
-          case "cancelButtonText": 
+          case "cancelButtonText":
             object["cancelText"] = object2[key];
             break;
-          case "confirmButtonText": 
+          case "confirmButtonText":
             object["confirmText"] = object2[key];
             break;
           default:
@@ -1509,7 +1577,7 @@ export default class my {
       return wx.showModal(object);
     }
   }
-  static alert(object) {return wx.showModal(object);}
+  static alert(object) { return wx.showModal(object); }
   static setNavigationBarColor(object) { return wx.setNavigationBarColor(object) }
   static hideNavigationBarLoading(object) {
     var object2 = {}
@@ -1558,7 +1626,7 @@ export default class my {
   static stopPullDownRefresh(object) {
     var object2 = {}
     if (object) {
-      object2.success = function(res) {
+      object2.success = function (res) {
         if (object.success) {
           object["success"](res);
         }
@@ -1566,7 +1634,7 @@ export default class my {
           object["complete"](res);
         }
       }
-      object2.fail = function(res) {
+      object2.fail = function (res) {
         if (object.fail) {
           object["fail"](res);
         }
@@ -1580,7 +1648,7 @@ export default class my {
   static startPullDownRefresh(object) {
     var object2 = {}
     if (object) {
-      object2.success = function(res) {
+      object2.success = function (res) {
         if (object.success) {
           object["success"](res);
         }
@@ -1588,7 +1656,7 @@ export default class my {
           object["complete"](res);
         }
       }
-      object2.fail = function(res) {
+      object2.fail = function (res) {
         if (object.fail) {
           object["fail"](res);
         }

@@ -11,18 +11,35 @@ Page({
       b: Math.round(Math.random() * 255 | 0),
     };
 
-    this.interval = setInterval(this.draw.bind(this), 17);
     this.ctx = my.createCanvasContext('canvas');
+    this.interval = setInterval(this.draw.bind(this), 17);
   },
 
   draw() {
-    const { ctx } = this;
-    ctx.setFillStyle('#FFF');
+    var { ctx } = this;
+    var context = ctx.weixinCanvasContext;
+
+
+    function ball(x, y) {
+      context.beginPath(0)
+      context.arc(x, y, 5, 0, Math.PI * 2)
+      context.setFillStyle('#1aad19')
+      context.setStrokeStyle('rgba(1,1,1,0)')
+      context.fill()
+      context.stroke()
+    }
+
+    ball(150, 150)
+    context.draw()
+    /*
+    ctx.setFillStyle('#FFF000');
     ctx.fillRect(0, 0, 610, 610);
 
     ctx.beginPath();
     ctx.arc(this.point.x, this.point.y, 20, 0, 2 * Math.PI);
-    ctx.setFillStyle('rgb(' + this.point.r + ', ' + this.point.g + ', ' + this.point.b + ')');
+    var color = 'rgb(' + this.point.r + ', ' + this.point.g + ', ' + this.point.b + ')';
+    // console.log(color)
+    ctx.setFillStyle(color);
     ctx.fill();
     ctx.draw();
 
@@ -40,7 +57,7 @@ Page({
       this.point.r = Math.round(Math.random() * 255 | 0);
       this.point.g = Math.round(Math.random() * 255 | 0);
       this.point.b = Math.round(Math.random() * 255 | 0);
-    }
+    }*/
   },
   drawBall() {
 

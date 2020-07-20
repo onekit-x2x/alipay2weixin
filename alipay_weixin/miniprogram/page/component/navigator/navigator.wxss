@@ -1,4 +1,5 @@
-navigator{
+.onekit-navigator{
+  display: block;
   background-color: lightcoral ;
   color: #fff ;
   margin-bottom: 10rpx ;

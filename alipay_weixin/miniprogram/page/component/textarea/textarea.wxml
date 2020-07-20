@@ -1,31 +1,31 @@
 
-<view  class="page">
-  <view  class="page-description">文本框</view>
-  <view  class="page-section">
-    <view  class="page-section-title">受控聚焦</view>
-    <view  class="page-section-demo">
-      <textarea  focus="{{focus}}" bindfocus="onFocus" bindblur="onBlur" placeholder="Please input something"></textarea>
-    </view>
-    <view  class="page-section-btns">
-      <onekit_button  type="default" size="mini" bindtap="bindButtonTap">聚焦</onekit_button>
-    </view>
-  </view>
-  <view  class="page-section">
-    <view  class="page-section-title">自适应高度</view>
-    <view  class="page-section-demo">
-      <textarea  bindblur="bindTextAreaBlur" auto-height placeholder="Please input something"></textarea>
-    </view>
-  </view>
+<onekit-view  Class="page">
+  <onekit-view  Class="page-description">文本框</onekit-view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">受控聚焦</onekit-view>
+    <onekit-view  Class="page-section-demo">
+      <onekit-textarea  focus="{{focus}}" bindfocus="onFocus" bindblur="onBlur" placeholder="Please input something"></onekit-textarea>
+    </onekit-view>
+    <onekit-view  Class="page-section-btns">
+      <onekit-button  type="default" size="mini" bindtap="bindButtonTap">聚焦</onekit-button>
+    </onekit-view>
+  </onekit-view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">自适应高度</onekit-view>
+    <onekit-view  Class="page-section-demo">
+      <onekit-textarea  bindblur="bindTextAreaBlur" auto-height placeholder="Please input something"></onekit-textarea>
+    </onekit-view>
+  </onekit-view>
 
-  <view  class="page-section">
-    <view  class="page-section-title">结合表单</view>
-    <form  bindsubmit="bindFormSubmit">
-      <view  class="page-section-demo">
-        <textarea  name="textarea" placeholder="Please input something"></textarea>
-      </view>
-      <view  class="page-section-btns">
-        <onekit_button  form-type="submit" size="mini" type="primary">提交</onekit_button>
-      </view>  
-    </form>
-  </view>
-</view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-title">结合表单</onekit-view>
+    <onekit-form  bindsubmit="bindFormSubmit">
+      <onekit-view  Class="page-section-demo">
+        <onekit-textarea  name="textarea" placeholder="Please input something"></onekit-textarea>
+      </onekit-view>
+      <onekit-view  Class="page-section-btns">
+        <onekit-button  form-type="submit" size="mini" type="primary">提交</onekit-button>
+      </onekit-view>  
+    </onekit-form>
+  </onekit-view>
+</onekit-view>

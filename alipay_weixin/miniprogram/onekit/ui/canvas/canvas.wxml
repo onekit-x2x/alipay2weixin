@@ -1,0 +1,7 @@
+<canvas 
+ class="onekit-canvas {{Class}}"
+ canvas-id="{{id}}" 
+ width="{{width}}" 
+ height="{{height}}" 
+ style="width:{{width}}rpx;height:{{height}}rpx;{{Style}}">
+</canvas>

@@ -1,12 +1,12 @@
-<view  class="page">
-  <view  class="page-description">
-    <view  class="text-demo-title">
-      <text  class="text-demo-text">这是一段文本。\n<text >\</text><text >n</text> 可以换行。</text>
-    </view>  
-  </view>
-  <view  class="page-section">
-    <view  class="page-section-demo">
-      <text >{{text}}</text>
-    </view>
-  </view>
-</view>
+<onekit-view  Class="page">
+  <onekit-view  Class="page-description">
+    <onekit-view  Class="text-demo-title">
+      <onekit-text  Class="text-demo-text">这是一段文本。\n<onekit-text >\</onekit-text><onekit-text >n</onekit-text> 可以换行。</onekit-text>
+    </onekit-view>  
+  </onekit-view>
+  <onekit-view  Class="page-section">
+    <onekit-view  Class="page-section-demo">
+      <onekit-text >{{text}}</onekit-text>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

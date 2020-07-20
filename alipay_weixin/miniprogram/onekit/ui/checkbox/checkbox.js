@@ -1,10 +1,32 @@
-import my from "../../../onekit/my"
+// onekit/ui/input/input.js
 Component({
-  mixins: [],
-  data: {},
-  props: {},
-  didMount() {},
-  didUpdate() {},
-  didUnmount() {},
-  methods: {},
-});
+  /**
+   * 组件的属性列表
+   */
+  behaviors: ['wx://form-field'],
+  options: {
+    styleIsolation: 'apply-shared'
+  },
+  properties: {
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    value:{type:String},
+    checked:{type:Boolean,value:false},
+    disabled:{type:Boolean,value:false},
+    color:{type:String}
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+
+  }
+})
