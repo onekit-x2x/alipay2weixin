@@ -17,22 +17,22 @@ Page({
 
   draw() {
     var { ctx } = this;
-    var context = ctx.weixinCanvasContext;
+    // var context = ctx.weixinCanvasContext;
 
 
-    function ball(x, y) {
-      context.beginPath(0)
-      context.arc(x, y, 5, 0, Math.PI * 2)
-      context.setFillStyle('#1aad19')
-      context.setStrokeStyle('rgba(1,1,1,0)')
-      context.fill()
-      context.stroke()
-    }
+    // function ball(x, y) {
+    //   context.beginPath(0)
+    //   context.arc(x, y, 5, 0, Math.PI * 2)
+    //   context.setFillStyle('#1aad19')
+    //   context.setStrokeStyle('rgba(1,1,1,0)')
+    //   context.fill()
+    //   context.stroke()
+    // }
 
-    ball(150, 150)
-    context.draw()
-    /*
-    ctx.setFillStyle('#FFF000');
+    // ball(150, 150)
+    // context.draw()
+    
+    ctx.setFillStyle('#FFF');
     ctx.fillRect(0, 0, 610, 610);
 
     ctx.beginPath();
@@ -57,7 +57,7 @@ Page({
       this.point.r = Math.round(Math.random() * 255 | 0);
       this.point.g = Math.round(Math.random() * 255 | 0);
       this.point.b = Math.round(Math.random() * 255 | 0);
-    }*/
+    }
   },
   drawBall() {
 

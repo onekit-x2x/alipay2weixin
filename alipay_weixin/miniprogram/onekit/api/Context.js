@@ -1,5 +1,5 @@
 import onekit from "../onekit"
-export default class CanvasContext {
+export default class Context {
   constructor() {
     this._actions = [];
     this._path = [];
