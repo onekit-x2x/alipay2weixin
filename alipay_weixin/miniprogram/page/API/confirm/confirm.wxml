@@ -3,7 +3,7 @@
   <view  class="page-section">
     <view  class="page-section-title">my.confirm</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="comfirm">显示确认框</onekit_button>
+      <onekit-button  type="primary" bindtap="comfirm">显示确认框</onekit-button>
     </view>
   </view>
 </view>

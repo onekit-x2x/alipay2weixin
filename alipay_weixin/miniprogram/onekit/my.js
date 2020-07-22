@@ -1250,7 +1250,7 @@ export default class my {
   static reportMonitor(name, value) {
     var js_code = getApp().onekit.jscode;
     wx.httpRequest({
-      url: "http://192.168.0.106:8080/onekit_adapter/reportMonitor",
+      url: "http://192.168.0.106:8080/onekit-adapter/reportMonitor",
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },

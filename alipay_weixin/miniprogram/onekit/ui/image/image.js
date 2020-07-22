@@ -1,23 +1,30 @@
 // onekit/ui/image/image.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+  options: {
+    styleIsolation: 'apply-shared'
+  },
   properties: {
-
-  },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
+      src: {
+        type:String,
+        value:'',
+      },
+      mode: {
+        type:String,
+        value:'scaleToFill',
+      },
+      lazyLoad: {
+        type:Boolean ,
+        value:false,
+      },
+},
   methods: {
+    image_error(e){
+      this.triggerEvent('error',{})
+  },
+  image_load(e){
+    this.triggerEvent('load',{})
+},
+
 
   }
 })

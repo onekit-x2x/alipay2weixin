@@ -15,13 +15,13 @@
       </view>
     </block>
     <view  class="page-section-demo">
-      <onekit_button  class="page-body-button" type="primary" bindtap="saveFile">保存文件</onekit_button>
-      <onekit_button  class="page-body-button" type="primary" bindtap="getFileInfo">获取文件信息</onekit_button>
-      <onekit_button  class="page-body-button" type="primary" bindtap="getSavedFileInfo">获取保存的文件信息</onekit_button>
-      <onekit_button  class="page-body-button" type="primary" bindtap="getSavedFileList">获取保存的文件列表</onekit_button>
-      <onekit_button  class="page-body-button" type="primary" bindtap="removeSavedFile">移除保存的文件</onekit_button>
+      <onekit-button  class="page-body-button" type="primary" bindtap="saveFile">保存文件</onekit-button>
+      <onekit-button  class="page-body-button" type="primary" bindtap="getFileInfo">获取文件信息</onekit-button>
+      <onekit-button  class="page-body-button" type="primary" bindtap="getSavedFileInfo">获取保存的文件信息</onekit-button>
+      <onekit-button  class="page-body-button" type="primary" bindtap="getSavedFileList">获取保存的文件列表</onekit-button>
+      <onekit-button  class="page-body-button" type="primary" bindtap="removeSavedFile">移除保存的文件</onekit-button>
       
-      <onekit_button  class="page-body-button" bindtap="clear">删除文件</onekit_button>
+      <onekit-button  class="page-body-button" bindtap="clear">删除文件</onekit-button>
     </view>
   </view>
 </view>

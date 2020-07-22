@@ -3,7 +3,7 @@
   <view  class="page-section">
     <view  class="page-section-title">my.generateImageFromCode</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="buttonClick" hover-class="defaultTap">生成二维码</onekit_button>
+      <onekit-button  type="primary" bindtap="buttonClick" hover-class="defaultTap">生成二维码</onekit-button>
       <image  src="{{imageStr}}" mode="{{mode}}"></image>
     </view>
   </view>

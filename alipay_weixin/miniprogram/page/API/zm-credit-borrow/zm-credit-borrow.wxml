@@ -3,7 +3,7 @@
   <view  class="page-section">
     <view  class="page-section-title">my.zmCreditBorrow</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="zmCreditBorrow">芝麻信用借还</onekit_button>
+      <onekit-button  type="primary" bindtap="zmCreditBorrow">芝麻信用借还</onekit-button>
     </view>
   </view>
 </view>

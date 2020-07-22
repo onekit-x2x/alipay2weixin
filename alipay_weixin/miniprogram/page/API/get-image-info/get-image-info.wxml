@@ -4,7 +4,7 @@
     <view  class="page-section-title">my.getImageInfo</view>
     <view  class="page-section-demo">
       <image  src="{{src}}" binderror="imageError" bindload="imageLoad"></image>
-      <onekit_button  type="primary" bindtap="getImageInfo">获取图片信息</onekit_button>
+      <onekit-button  type="primary" bindtap="getImageInfo">获取图片信息</onekit-button>
     </view>
   </view>
 </view>

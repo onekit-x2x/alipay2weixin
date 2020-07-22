@@ -9,8 +9,8 @@
         <input  class="page-body-form-value" type="text" placeholder="导航栏图片地址" name="image"></input>
       </view>
       <view  class="page-section-btns">
-        <onekit_button  type="primary" size="mini" formType="submit">设置</onekit_button>
-        <onekit_button  type="primary" size="mini" bindtap="resetNavigationBar">重置</onekit_button>
+        <onekit-button  type="primary" size="mini" formType="submit">设置</onekit-button>
+        <onekit-button  type="primary" size="mini" bindtap="resetNavigationBar">重置</onekit-button>
       </view>
     </view>
   </form>

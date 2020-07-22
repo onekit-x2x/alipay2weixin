@@ -3,7 +3,7 @@
   <view  class="page-section">
     <view  class="page-section-title">my.showActionSheet</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="showActionSheet">显示操作菜单</onekit_button>
+      <onekit-button  type="primary" bindtap="showActionSheet">显示操作菜单</onekit-button>
     </view>
   </view>
 </view>

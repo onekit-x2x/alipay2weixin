@@ -2,7 +2,7 @@
   <view  class="page-section">
     <form  bindsubmit="scanCode">
       <view >
-        <onekit_button  type="primary" bindtap="scan">扫码</onekit_button>
+        <onekit-button  type="primary" bindtap="scan">扫码</onekit-button>
       </view>
     </form>
   </view>

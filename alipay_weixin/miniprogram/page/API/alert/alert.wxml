@@ -3,7 +3,7 @@
   <view  class="page-section">
     <view  class="page-section-title">my.alert</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="alert">显示警告框</onekit_button>
+      <onekit-button  type="primary" bindtap="alert">显示警告框</onekit-button>
     </view>
   </view>
 </view>

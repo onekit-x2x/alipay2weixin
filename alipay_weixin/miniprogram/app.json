@@ -32,8 +32,8 @@
     }
   },
   "pages": [
-    "page/component/form/form",
     "page/tabBar/component/index",
+    "page/component/video/video",
     "page/tabBar/API/index"
   ],
  

@@ -4,7 +4,7 @@
     <view  class="page-section-title">my.textRiskIdentification</view>
     <view  class="page-section-demo">
       <textarea  placeholder="输入文本内容" bindinput="handleInput" name="textarea"></textarea>
-      <onekit_button  type="primary" bindtap="textRiskIdentification">开始识别</onekit_button>
+      <onekit-button  type="primary" bindtap="textRiskIdentification">开始识别</onekit-button>
     </view>
   </view>
 </view>

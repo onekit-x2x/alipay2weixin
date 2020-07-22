@@ -7,6 +7,6 @@
     <view  id="scroll" style="height:200px;overflow: auto">
       <view  style="height:400px">独立滚动区域</view>
     </view>
-    <onekit_button  type="primary" bindtap="createSelectorQuery">节点查询</onekit_button>
+    <onekit-button  type="primary" bindtap="createSelectorQuery">节点查询</onekit-button>
   </view>
 </view>

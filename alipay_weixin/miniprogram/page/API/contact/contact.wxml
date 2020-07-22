@@ -5,21 +5,21 @@
   <view  class="page-section">
     <view  class="page-section-title">my.choosePhoneContact</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="choosePhoneContact">唤起本地通讯录</onekit_button>
+      <onekit-button  type="primary" bindtap="choosePhoneContact">唤起本地通讯录</onekit-button>
     </view>
   </view>
 
   <view  class="page-section">
     <view  class="page-section-title">my.chooseAlipayContact</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="chooseAlipayContact">唤起支付宝通讯录</onekit_button>
+      <onekit-button  type="primary" bindtap="chooseAlipayContact">唤起支付宝通讯录</onekit-button>
     </view>
   </view>
 
   <view  class="page-section">
     <view  class="page-section-title">my.chooseContact</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="chooseContact">选择联系人</onekit_button>
+      <onekit-button  type="primary" bindtap="chooseContact">选择联系人</onekit-button>
     </view>
   </view>
 
@@ -271,7 +271,7 @@
         </view>
       </view>
 
-      <onekit_button  type="primary" bindtap="addPhoneContact">添加到手机联系人</onekit_button>
+      <onekit-button  type="primary" bindtap="addPhoneContact">添加到手机联系人</onekit-button>
 
     </view>
   </view>

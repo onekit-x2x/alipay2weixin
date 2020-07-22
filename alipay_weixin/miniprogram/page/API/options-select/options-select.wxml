@@ -3,10 +3,10 @@
   <view  class="page-section">
     <view  class="page-section-title">my.optionsSelect</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="openOne">单列选择器</onekit_button>
+      <onekit-button  type="primary" bindtap="openOne">单列选择器</onekit-button>
     </view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="openTwo">双列选择器</onekit_button>
+      <onekit-button  type="primary" bindtap="openTwo">双列选择器</onekit-button>
     </view>
   </view>
 </view>

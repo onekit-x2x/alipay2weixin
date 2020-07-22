@@ -3,7 +3,7 @@
   <view  class="page-section">
     <view  class="page-section-title">my.compressImage</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="selectImage" hover-class="defaultTap">选择图片</onekit_button>
+      <onekit-button  type="primary" bindtap="selectImage" hover-class="defaultTap">选择图片</onekit-button>
       <image  src="{{compressedSrc}}" mode="{{mode}}"></image>
     </view>
   </view>

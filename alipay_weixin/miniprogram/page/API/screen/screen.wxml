@@ -15,7 +15,7 @@
   <view  class="page-section">
     <view  class="page-section-title">获取屏幕亮度</view>
     <view  class="page-section-demo">
-      <onekit_button  type="primary" bindtap="getBrightness">获取屏幕亮度</onekit_button>
+      <onekit-button  type="primary" bindtap="getBrightness">获取屏幕亮度</onekit-button>
     </view>
   </view>
 </view>

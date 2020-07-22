@@ -12,7 +12,7 @@
 
     </view>
     <view  class="btn-con">
-        <onekit_button  catchTap="photoSubmit" class="photo-submit" type="primary">上传图片</onekit_button>
+        <onekit-button  catchTap="photoSubmit" class="photo-submit" type="primary">上传图片</onekit-button>
     </view>
 </view>
 <view  class="foot">
