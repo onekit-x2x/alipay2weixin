@@ -11,7 +11,7 @@ export default class CanvasContext {
     return weixinCanvasContext.save();
   }
   restore() {
-    return this.weixinCanvasContext._actions.restore();
+    return this.weixinCanvasContext.restore();
   }
   //
   setGlobalAlpha(alpha) {
