@@ -14,8 +14,6 @@ Component({
     indicatorClass:{type:String},
     maskStyle:{type:String},
     maskClass:{type:String},
-    Class:String,
-    Style:String
   },
 
   /**
