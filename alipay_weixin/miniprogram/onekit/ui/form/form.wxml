@@ -3,8 +3,9 @@ class="onekit-form {{Class}}"
 style="{{Style}}"
 report-submit="{{reportSubmit}}"
 report-submit-timeout="{{report-submit-timeout}}"
+
 bindsubmit="form_submit"
 bindreset="form_rese"
 >
 <slot></slot>
-</form>
+</form> 

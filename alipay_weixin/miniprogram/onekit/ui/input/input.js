@@ -5,13 +5,13 @@ Component({
    */
   behaviors: ['wx://form-field'],
   options: {
-    styleIsolation: 'apply-shared'
+   
   },
   properties: {
+    name:{type:String},
     Class:{type:String,value:""},
     Style:{type:String,value:""},
     value:{type:String},
-    name:{type:String},
     type:{type:String,value:"text"},
     password:{type:Boolean,value:false},
     placeholder:{type:String,value:""},
