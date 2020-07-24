@@ -5,7 +5,6 @@ Component({
    */
   behaviors: ['wx://form-field-group'],
   options: {
-    styleIsolation: 'apply-shared'
   },
   properties: {
     Class:{type:String,value:""},

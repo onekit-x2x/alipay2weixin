@@ -1,7 +1,6 @@
 // onekit/ui/swiper-item/swiper-item.js
 Component({
   options: {
-    styleIsolation: 'apply-shared'
   },
   properties: {
 
