@@ -1,7 +1,7 @@
 // onekit/ui/navigator/navigator.js
 Component({
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
   },
   /**
    * 组件的属性列表
