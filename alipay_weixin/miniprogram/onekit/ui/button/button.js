@@ -2,7 +2,8 @@ import my from "../../../onekit/my"
 Component({
   behaviors: ['wx://form-field-button'],
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
+ 
   },
   attached() { 
     // var openType;

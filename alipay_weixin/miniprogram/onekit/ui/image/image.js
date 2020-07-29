@@ -1,7 +1,7 @@
 // onekit/ui/image/image.js
 Component({
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
   },
   properties: {
     Class:{type:String,value:""},

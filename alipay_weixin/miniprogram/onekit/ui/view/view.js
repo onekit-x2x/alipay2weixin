@@ -1,6 +1,7 @@
 // onekit/ui/view/view.js
 Component({
   options: {
+    virtualHost: true
    
   },
   /**

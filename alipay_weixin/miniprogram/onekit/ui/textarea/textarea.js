@@ -5,7 +5,7 @@ Component({
    */
   behaviors: ['wx://form-field'],
   options: {
-    styleIsolation: 'apply-shared'
+    virtualHost: true
   },
   properties: {
     Class:{type:String,value:""},

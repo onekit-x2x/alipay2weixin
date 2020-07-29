@@ -5,6 +5,7 @@ Component({
    */
   behaviors: ['wx://form-field-group'],
   options: {
+    virtualHost: true
   },
   
   properties: {

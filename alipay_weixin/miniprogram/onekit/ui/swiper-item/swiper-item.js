@@ -1,6 +1,7 @@
 // onekit/ui/swiper-item/swiper-item.js
 Component({
   options: {
+    virtualHost: true
   },
   properties: {
 
