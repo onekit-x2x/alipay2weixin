@@ -7,12 +7,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    Class:{
-      type:String,
-      value:""
-    },
-    Style:{type:String,
-      value:""},
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
     hoverClass:{
       type:String,
       value:""

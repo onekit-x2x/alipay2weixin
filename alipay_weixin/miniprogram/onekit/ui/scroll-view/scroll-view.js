@@ -6,12 +6,9 @@ Component({
   options: {
   },
   properties: {
-    Class:{
-      type:String,
-      value:""
-    },
-    Style:{type:String,
-      value:""},
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
     scrollX: {
       type: Boolean,
       value: false,

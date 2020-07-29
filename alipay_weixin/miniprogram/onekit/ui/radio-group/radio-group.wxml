@@ -11,6 +11,7 @@ name="{{name}}"
 <radio-group
 class="onekit-radio-group {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
 name="{{name}}"
 bindchange="radio_Change"
 >

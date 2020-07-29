@@ -7,6 +7,9 @@ Component({
     
   },
   properties: {
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
     selectable:{
       type:Boolean,
       value:false},

@@ -8,17 +8,13 @@ Component({
    */
   
   properties: {
-    Class:{
-      type:String,
-      value:""
-    },
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
     width: { type: String,
       value:"300px" },
     height: { type: String,
       value:"225px" },
-    Style:{type:String,
-      value:""},
-    
     id: {
       type:String,
       value:""

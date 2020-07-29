@@ -10,6 +10,7 @@ Component({
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     value:{type:String},
     name:{type:String},
     placeholder:{type:String,value:""},

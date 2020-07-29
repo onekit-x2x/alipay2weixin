@@ -1,6 +1,7 @@
 <navigator
 class="onekit-navigator {{Class}}"
 style="{{Style}}"
+id="{{Id}}"
 url="{{url}}"
 open-type="{{openType}}"
 hover-class="{{hoverClass}}"

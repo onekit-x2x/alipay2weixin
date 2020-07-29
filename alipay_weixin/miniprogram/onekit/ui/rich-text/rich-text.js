@@ -6,6 +6,9 @@ Component({
   options: {
   },
   properties: {
+    Class:{type:String,value:""},
+    Style:{type:String,value:""},
+    Id:{type:String,value:""},
     nodes:{
       type:[],
       value:0,

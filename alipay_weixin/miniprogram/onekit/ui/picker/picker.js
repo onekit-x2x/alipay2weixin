@@ -8,6 +8,7 @@ Component({
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     title:{type:String},
     range:{type:Array},
     rangeKey:{type:String},

@@ -8,6 +8,7 @@ Component({
   properties: {
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     value:{type:Array},
     indicatorStyle:{type:String},
     indicatorClass:{type:String},

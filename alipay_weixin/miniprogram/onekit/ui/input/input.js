@@ -11,6 +11,7 @@ Component({
     name:{type:String},
     Class:{type:String,value:""},
     Style:{type:String,value:""},
+    Id:{type:String,value:""},
     value:{type:String},
     type:{type:String,value:"text"},
     password:{type:Boolean,value:false},
