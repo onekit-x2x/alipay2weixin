@@ -11,7 +11,8 @@ Component({
     Class:{type:String,value:""},
     Style:{type:String,value:""},
     Id:{type:String,value:""},
-    name:{type:String,value:''}
+    name:{type:String,value:''},
+    value:{type:String,value:''},
   },
 
   /**

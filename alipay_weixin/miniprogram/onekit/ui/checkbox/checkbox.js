@@ -3,7 +3,7 @@ Component({
   /**
    * 组件的属性列表
    */
-  behaviors: ['wx://form-field'],
+  behaviors: ['wx://form-field-group'],
   options: {
     virtualHost: true
   },
@@ -14,7 +14,9 @@ Component({
     value:{type:String},
     checked:{type:Boolean,value:false},
     disabled:{type:Boolean,value:false},
-    color:{type:String}
+    color:{type:String},
+    name:{type:String,value:''},
+    value:{type:String,value:''}
   },
 
   /**

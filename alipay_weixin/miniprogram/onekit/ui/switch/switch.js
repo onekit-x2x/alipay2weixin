@@ -15,7 +15,8 @@ Component({
     checked:{type:Boolean,value:false},
     disabled:{type:Boolean,value:false},
     color:{type:String,value:''},
-    name:{type:String,value:''}
+    name:{type:String,value:''},
+    value:{type:String,value:''},
   },
 
   /**

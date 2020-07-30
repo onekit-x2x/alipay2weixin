@@ -9,11 +9,11 @@ Component({
    
   },
   properties: {
-    name:{type:String},
+    name:{type:String,value:''},
     Class:{type:String,value:""},
     Style:{type:String,value:""},
     Id:{type:String,value:""},
-    value:{type:String},
+    value:{type:String,value:''},
     type:{type:String,value:"text"},
     password:{type:Boolean,value:false},
     placeholder:{type:String,value:""},

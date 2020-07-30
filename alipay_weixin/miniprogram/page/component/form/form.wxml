@@ -12,6 +12,7 @@
         <onekit-view  Class="form-row-label">Switch</onekit-view>
         <onekit-view  Class="form-row-content" style="text-align: right">
           <onekit-switch name="switch"></onekit-switch>
+          <onekit-checkbox name="check"></onekit-checkbox>
         </onekit-view>
       </onekit-view>
       <onekit-view  Class="form-line"></onekit-view>
@@ -40,8 +41,8 @@
         </onekit-checkbox-group>
       </onekit-view>
       <onekit-view  Class="page-section-btns">
-        <onekit-view ><onekit-button  type="ghost" size="mini" formType="reset">Reset</onekit-button></onekit-view>
-        <onekit-view ><onekit-button  type="primary" size="mini" formType="submit">Submit</onekit-button></onekit-view>
+        <onekit-view ><button  type="ghost" size="mini" formType="reset">Reset</button></onekit-view>
+        <onekit-view ><button  type="primary" size="mini" formType="submit">Submit</button></onekit-view>
       </onekit-view>
     </onekit-view>
   </form>
