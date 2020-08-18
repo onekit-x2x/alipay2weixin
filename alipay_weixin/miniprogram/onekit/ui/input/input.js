@@ -10,8 +10,8 @@ Component({
   },
   properties: {
     name:{type:String,value:''},
-    Class:{type:String,value:""},
-    Style:{type:String,value:""},
+    onekitClass:{type:String,value:""},
+    onekitStyle:{type:String,value:""},
     Id:{type:String,value:""},
     value:{type:String,value:''},
     type:{type:String,value:"text"},

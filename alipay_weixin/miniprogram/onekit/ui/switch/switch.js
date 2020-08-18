@@ -9,8 +9,8 @@ Component({
   },
   
   properties: {
-    Class:{type:String,value:""},
-    Style:{type:String,value:""},
+    onekitClass:{type:String,value:""},
+    onekitStyle:{type:String,value:""},
     Id:{type:String,value:""},
     checked:{type:Boolean,value:false},
     disabled:{type:Boolean,value:false},

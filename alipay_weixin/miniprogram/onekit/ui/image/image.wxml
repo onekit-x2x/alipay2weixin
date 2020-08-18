@@ -1,6 +1,6 @@
 <!--onekit/ui/image/image.wxml-->
 <image
-class="onekit-image {{Class}}"
+class="onekit-image {{onekitClass}}"
 style="{{style}}"
 id="{{Id}}"
 src="{{src}}"

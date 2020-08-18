@@ -1,7 +1,7 @@
-<onekit-view  Class="page">
-  <onekit-view  Class="page-description">进度条</onekit-view>
-  <onekit-view  Class="page-section">
-    <onekit-view  Class="page-section-demo">
+<onekit-view  onekitClass="page">
+  <onekit-view  onekitClass="page-description">进度条</onekit-view>
+  <onekit-view  onekitClass="page-section">
+    <onekit-view  onekitClass="page-section-demo">
       <onekit-progress  percent="20" show-info></onekit-progress>
       <onekit-progress  percent="40" active></onekit-progress>
       <onekit-progress  percent="60" stroke-width="10"></onekit-progress>

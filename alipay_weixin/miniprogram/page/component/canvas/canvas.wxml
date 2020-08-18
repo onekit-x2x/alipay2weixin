@@ -1,10 +1,10 @@
-<onekit-view Class="page">
-  <onekit-view Class="canvas-view">
+<onekit-view onekitClass="page">
+  <onekit-view onekitClass="canvas-view">
     <onekit-canvas 
       id="canvas"
       width="610"
       height="610"
-      Class="canvas"
+      onekitClass="canvas"
       bindtouchstart="log"
       bindtouchmove="log"
       bindtouchend="log"

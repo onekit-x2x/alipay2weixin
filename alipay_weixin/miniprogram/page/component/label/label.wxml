@@ -1,7 +1,7 @@
-<onekit-view  Class="page">
-  <onekit-view  Class="page-section">
-    <onekit-view  Class="page-section-title">Checkbox</onekit-view>
-    <onekit-view  Class="page-section-demo">
+<onekit-view  onekitClass="page">
+  <onekit-view  onekitClass="page-section">
+    <onekit-view  onekitClass="page-section-title">Checkbox</onekit-view>
+    <onekit-view  onekitClass="page-section-demo">
       <onekit-checkbox-group >
         <onekit-view >
           <onekit-label >
@@ -19,9 +19,9 @@
     </onekit-view>
   </onekit-view>
 
-  <onekit-view  Class="page-section">
-    <onekit-view  Class="page-section-title">Radio</onekit-view>
-    <onekit-view  Class="page-section-demo">
+  <onekit-view  onekitClass="page-section">
+    <onekit-view  onekitClass="page-section-title">Radio</onekit-view>
+    <onekit-view  onekitClass="page-section-demo">
       <onekit-radio-group >
         <onekit-view >
           <radio  id="AngularJS" value="AngularJS"></radio>
@@ -35,9 +35,9 @@
     </onekit-view>
   </onekit-view>
 
-  <onekit-view  Class="page-section">
-    <onekit-view  Class="page-section-title">label中有多个 Checkbox ，点击后只选中一个</onekit-view>
-    <onekit-view  Class="page-section-demo">
+  <onekit-view  onekitClass="page-section">
+    <onekit-view  onekitClass="page-section-title">label中有多个 Checkbox ，点击后只选中一个</onekit-view>
+    <onekit-view  onekitClass="page-section-demo">
       <onekit-label >
         <onekit-checkbox >选中我</onekit-checkbox>
         <onekit-checkbox >选不中</onekit-checkbox>
