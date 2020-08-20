@@ -1,77 +1,77 @@
-<onekit-view  onekitClass="page">
+<onekit-view onekit-id="xxxxxxx" onekit-class="page">
   <onekit-view >
     <onekit-button  wx:if="{{returnIndex}}" bindtap="returnIndex">回到首页</onekit-button>
   </onekit-view>
-  <onekit-view  onekitClass="page-description">视图容器，相当于 web 的 div 或者 react-native 的 View。</onekit-view>
-  <onekit-view  onekitClass="page-section">
-    <onekit-view  onekitClass="page-section-demo">
-      <onekit-view  onekitClass="stream">
-        <onekit-view  onekitClass="post">
-          <onekit-view  onekitClass="postUser">
-            <onekit-view  onekitClass="postUser__name">Chris</onekit-view>
+  <onekit-view onekit-id="xxxxxxx" onekit-class="page-description">视图容器，相当于 web 的 div 或者 react-native 的 View。</onekit-view>
+  <onekit-view  onekit-class="page-section">
+    <onekit-view  onekit-class="page-section-demo">
+      <onekit-view  onekit-class="stream">
+        <onekit-view  onekit-class="post">
+          <onekit-view  onekit-class="postUser">
+            <onekit-view  onekit-class="postUser__name">Chris</onekit-view>
           </onekit-view>
-          <onekit-view  onekitClass="postBody">
-            <onekit-view  onekitClass="postBody__content">
+          <onekit-view  onekit-class="postBody">
+            <onekit-view  onekit-class="postBody__content">
               欢迎使用支付宝小程序！！！
             </onekit-view>
-            <onekit-view  onekitClass="postBody__date">
+            <onekit-view  onekit-class="postBody__date">
               May 20
             </onekit-view>
           </onekit-view>
         </onekit-view>
 
-        <onekit-view  onekitClass="post">
-          <onekit-view  onekitClass="postUser">
-            <onekit-view  onekitClass="postUser__name">Jack</onekit-view>
+        <onekit-view  onekit-class="post">
+          <onekit-view  onekit-class="postUser">
+            <onekit-view  onekit-class="postUser__name">Jack</onekit-view>
           </onekit-view>
-          <onekit-view  onekitClass="postBody">
-            <onekit-view  onekitClass="postBody__content">
+          <onekit-view  onekit-class="postBody">
+            <onekit-view  onekit-class="postBody__content">
               @Chris 我该如何上手？
             </onekit-view>
-            <onekit-view  onekitClass="postBody__date">
+            <onekit-view  onekit-class="postBody__date">
               May 21
             </onekit-view>
           </onekit-view>
         </onekit-view>
 
-        <onekit-view  onekitClass="post">
-          <onekit-view  onekitClass="postUser">
-            <onekit-view  onekitClass="postUser__name">Chris</onekit-view>
+        <onekit-view  onekit-class="post">
+          <onekit-view  onekit-class="postUser">
+            <onekit-view  onekit-class="postUser__name">Chris</onekit-view>
           </onekit-view>
-          <onekit-view  onekitClass="postBody">
-            <onekit-view  onekitClass="postBody__content">
+          <onekit-view  onekit-class="postBody">
+            <onekit-view  onekit-class="postBody__content">
               你可以查看 Demo，对小程序有一个简单的了解；然后下载我们的 IDE 进行开发。
             </onekit-view>
-            <onekit-view  onekitClass="postBody__date">
+            <onekit-view  onekit-class="postBody__date">
               May 22
             </onekit-view>
           </onekit-view>
         </onekit-view>
 
-        <onekit-view  onekitClass="post">
-          <onekit-view  onekitClass="postUser">
-            <onekit-view  onekitClass="postUser__name">Jessie</onekit-view>
+        <onekit-view  onekit-class="post">
+          <onekit-view  onekit-class="postUser">
+            <onekit-view  onekit-class="postUser__name">Jessie</onekit-view>
           </onekit-view>
           
-          <onekit-view  onekitClass="postBody" hoveronekitClass="red">
-            <onekit-view  onekitClass="postBody__content">
+          <onekit-view  onekit-class="postBody" hoveronekitClass="red">
+            <onekit-view  onekit-class="postBody__content">
               赞!
             </onekit-view>
-            <onekit-view  onekitClass="postBody__date" hidden>
+            <onekit-view  onekit-class="postBody__date" hidden>
               June 1
             </onekit-view>
           </onekit-view>
         </onekit-view>
 
-        <onekit-view  onekitClass="post" hidden="">
-          <onekit-view  onekitClass="postUser">
-            <onekit-view  onekitClass="postUser__name">Jessie</onekit-view>
+        <onekit-view  onekit-class="post" hidden="">
+          <onekit-view  onekit-class="postUser">
+            <onekit-view  onekit-class="postUser__name">Jessie</onekit-view>
           </onekit-view>
-          <onekit-view  onekitClass="postBody">
-            <onekit-view  onekitClass="postBody__content">
+          <onekit-view  onekit-class="postBody">
+            <onekit-view  onekit-class="postBody__content">
               赞! +1
             </onekit-view>
-            <onekit-view  onekitClass="postBody__date">
+            <onekit-view  onekit-class="postBody__date">
               June 1
             </onekit-view>
           </onekit-view>

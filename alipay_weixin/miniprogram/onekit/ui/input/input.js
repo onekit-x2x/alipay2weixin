@@ -12,7 +12,7 @@ Component({
     name:{type:String,value:''},
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
     value:{type:String,value:''},
     type:{type:String,value:"text"},
     password:{type:Boolean,value:false},

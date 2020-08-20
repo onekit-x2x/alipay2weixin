@@ -2,7 +2,7 @@
 <image
 class="onekit-image {{onekitClass}}"
 style="{{style}}"
-id="{{Id}}"
+id="{{onekitId}}"
 src="{{src}}"
 mode="{{mode}}"
 lazy-load="{{lazyLoad}}"

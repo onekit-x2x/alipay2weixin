@@ -5,7 +5,9 @@ Component({
   },
   mixins: [],
   data: {},
-  props: {},
+  props: {
+    onekitId:{type:String,value:""},
+  },
   didMount() {},
   didUpdate() {
   },

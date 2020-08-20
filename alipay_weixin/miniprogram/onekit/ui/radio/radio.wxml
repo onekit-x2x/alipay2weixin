@@ -5,7 +5,7 @@ value="{{value}}"
 checked="{{checked}}"
 disabled="{{disabled}}"
 color="{{color}}"
-id="{{Id}}"
+id="{{onekitId}}"
 bindtap="item_tap"
 >
 <slot/>

@@ -10,12 +10,12 @@ Component({
   properties: {
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
+    onekitId:{type:String,value:""},
     value:{type:String},
     checked:{type:Boolean,value:false},
     disabled:{type:Boolean,value:false},
     color:{type:String},
-    Id:{type:String}
+    onekitId:{type:String}
   },
 
   /**

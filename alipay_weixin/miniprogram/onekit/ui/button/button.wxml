@@ -1,7 +1,7 @@
 <button
 class="onekit-button Class {{onekitClass}}"
 style="{{onekitStyle}}"
-id="{{Id}}"
+id="{{onekitId}}"
 scope="phoneNumber"
   onTap="button_onTap"
   size="{{size}}"

@@ -1,6 +1,6 @@
 import my from "../../../onekit/my"
 const markers = [{
-  id: 0,
+  'onekit-Id': 0,
   latitude: 30.266786,
   longitude: 120.10675,
   width: 19,
@@ -12,7 +12,7 @@ const markers = [{
 }];
 
 const animMarker = [{
-  id: 1,
+  'onekit-Id': 1,
   latitude: 30.266786,
   longitude: 120.10675,
   width: 19,
@@ -28,7 +28,7 @@ const animMarker = [{
 }];
 
 const labelMarker = [{
-  id: 2,
+  'onekit-Id': 2,
   latitude: 30.266786,
   longitude: 120.10675,
   width: 19,
@@ -45,7 +45,7 @@ const labelMarker = [{
   markerLevel: 2
 }];
 const customCalloutMarker = [{
-  id: 3,
+  'onekit-Id': 3,
   latitude: 30.266786,
   longitude: 120.10675,
   width: 19,
@@ -69,7 +69,7 @@ const customCalloutMarker = [{
 }];
 
 const iconAppendStrMarker = [{
-  id: 34,
+  'onekit-Id': 34,
   latitude: 30.266786,
   longitude: 120.10675,
   width: 19,

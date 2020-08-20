@@ -10,12 +10,11 @@ Component({
   properties: {
     onekitClass:{type:String,value:""},
     onekitStyle:{type:String,value:""},
-    Id:{type:String,value:""},
     width: { type: String,
       value:"300px" },
     height: { type: String,
       value:"225px" },
-    id: {
+    'onekit-id': {
       type:String,
       value:""
     },

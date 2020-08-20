@@ -1,7 +1,7 @@
 <checkbox-group
 class="onekit-checkbox-group {{onekitClass}}"
 style="{{onekitStyle}}"
-id="{{Id}}"
+id="{{onekitId}}"
 name="{{name}}"
 value="{{value}}"
 bindchange="checkboxGroup_change"
