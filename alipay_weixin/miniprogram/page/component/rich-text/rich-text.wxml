@@ -1,3 +1,0 @@
-<onekit-view>
-  <onekit-rich-text  nodes="{{nodes}}" bindtap="tap"></onekit-rich-text>
-</onekit-view>

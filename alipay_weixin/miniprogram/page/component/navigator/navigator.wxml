@@ -1,8 +1,0 @@
-<onekit-view onekitClass="page">
-  <onekit-view onekitClass="page-description">导航栏</onekit-view>
-  <onekit-navigator open-type="navigate" url="./navigate" hover-class="navigator-hover">跳转到新页面</onekit-navigator>
-  <onekit-navigator open-type="redirect" url="./redirect" hover-class="navigator-hover">在当前页打开</onekit-navigator>
-  <onekit-navigator open-type="switchTab" url="/page/tabBar/API/index" hover-class="navigator-hover">跳转到另外一个 Tab - API</onekit-navigator>
-  <onekit-navigator open-type="reLaunch" url="/page/tabBar/component/index" hover-class="navigator-hover">重新打开</onekit-navigator>
-  <onekit-navigator open-type="navigateBack" hover-class="navigator-hover">返回上一页面</onekit-navigator>
-</onekit-view>

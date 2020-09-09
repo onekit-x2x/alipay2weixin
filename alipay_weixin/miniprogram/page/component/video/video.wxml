@@ -1,4 +1,0 @@
-
-  <onekit-video  src="{{src}}" class="video" id="video" poster="https://zos.alipayobjects.com/rmsportal/SSWkSLDrrgsLFDfsjzTZ.png" autoplay="{{autoplay}}" object-fit="{{objectFit}}" loop="{{loop}}" show-fullscreen-btn="{{showFullscreenBtn}}" show-center-play-btn="{{showCenterPlayBtn}}" bindplay="onPlay" bindpause="onPause" bindended="onEnded" bindtimeUpdate="onTimeUpdate" bindloading="onLoading" bindstop="onStop" enableNative="{{true}}" muted="{{muted}}">
-    </onekit-video>
-   
