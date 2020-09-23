@@ -22,10 +22,10 @@ Component({
 },
   methods: {
     image_error(e){
-      this.triggerEvent('error',{})
+      this.triggerEvent('error')
   },
   image_load(e){
-    this.triggerEvent('load',{})
+    this.triggerEvent('load')
 },
 
 
