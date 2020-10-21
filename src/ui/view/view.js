@@ -1,40 +1,37 @@
-import onekit_behavior from `../../behavior/onekit_behavior`
-import alipay_behavior from `../../behavior/alipay_behavior`
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
+import alipay_behavior from '../../behavior/alipay_behavior'
+
 Component({
-  behaviors:[onekit_behavior,alipay_behavior],
+  behaviors: [onekit_behavior, alipay_behavior, 'wx://form-field-group'],
   options: {
     virtualHost: true
-   
   },
   properties: {
-    hoverClass:{
-      type:String,
-      value:""
+    hoverClass: {
+      type: String,
+      value: ''
     },
-    hoverStarTime:{
-      type:Number,
-      value:""
+    hoverStarTime: {
+      type: Number,
+      value: ''
     },
-    hoverStayTime:{
-      type:Number,
-      value:""
+    hoverStayTime: {
+      type: Number,
+      value: ''
     },
-    hoverStopPropagation:{
-      type:Boolean,
-      value:false
+    hoverStopPropagation: {
+      type: Boolean,
+      value: false
     },
-    disableScroll:{
-      type:Boolean,
-      value:false
+    disableScroll: {
+      type: Boolean,
+      value: false
     },
-    hidden:{
-      type:Boolean,
-      value:false
+    hidden: {
+      type: Boolean,
+      value: false
     },
-    disableScroll:{
-      type:Object,
-      value:{}
-    },    
   },
 
   /**
@@ -48,8 +45,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    view_Tap(e){
-      this.triggerEvent("Tap",e)
+    view_Tap(e) {
+      this.triggerEvent('Tap', e)
     }
   }
 })

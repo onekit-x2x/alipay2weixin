@@ -211,7 +211,7 @@ class BuildTask {
     /**
      * 拷贝 demo 到目标目录
      */
-    let isDemoExists = false
+    const isDemoExists = false
     gulp.task(`${id}-demo`, gulp.series(async () => {
       const demoDist = config.demoDist
 
@@ -237,7 +237,7 @@ class BuildTask {
      * 生成package.json
      */
     gulp.task(`${id}-package-json`, (done) => {
-      const pkgJson = _.readJson(path.resolve(__dirname, '../package.json'));
+      const pkgJson = _.readJson(path.resolve(__dirname, '../package.json'))
       const json = {};
       ['name', 'version', 'description', 'author', 'license'].forEach((item) => {
         json[item] = pkgJson[item]

@@ -1,13 +1,15 @@
-import onekit_behavior from `../../behavior/onekit_behavior`
-import alipay_behavior from `../../behavior/alipay_behavior`
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
+import alipay_behavior from '../../behavior/alipay_behavior'
+
 Component({
-  behaviors:[onekit_behavior,alipay_behavior],
-  /**
-   * 组件的属性列表
-   */
+  behaviors: [onekit_behavior, alipay_behavior, 'wx://form-field-group'],
   options: {
     virtualHost: true
   },
+  /**
+   * 组件的属性列表
+   */
   properties: {
     scaleArea: {
       type: Boolean,

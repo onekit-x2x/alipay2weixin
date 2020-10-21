@@ -1,7 +1,9 @@
-import onekit_behavior from `../../behavior/onekit_behavior`
-import alipay_behavior from `../../behavior/alipay_behavior`
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
+import alipay_behavior from '../../behavior/alipay_behavior'
+
 Component({
-  behaviors:[onekit_behavior,alipay_behavior],
+  behaviors: [onekit_behavior, alipay_behavior, 'wx://form-field-group'],
   options: {
     virtualHost: true
   },
@@ -23,10 +25,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    coverImage_load(e) {
+    coverImage_load() {
       this.triggerEvent('load', {})
     },
-    coverImage_error(e) {
+    coverImage_error() {
       this.triggerEvent('error', {})
     }
   }

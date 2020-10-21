@@ -1,13 +1,14 @@
-import onekit_behavior from `../../behavior/onekit_behavior`
-import alipay_behavior from `../../behavior/alipay_behavior`
+/* eslint-disable max-len */
+/* eslint-disable camelcase */
+import onekit_behavior from '../../behavior/onekit_behavior'
+import alipay_behavior from '../../behavior/alipay_behavior'
+
 Component({
-  behaviors:[onekit_behavior,alipay_behavior],
-  behaviors: ['wx://form-field-group'],
+  behaviors: [onekit_behavior, alipay_behavior, 'wx://form-field-group'],
   options: {
     virtualHost: true
   },
   properties: {
-    
     name: {type: String, value: ''}
   },
   lifetimes: {
