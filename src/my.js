@@ -60,7 +60,7 @@ export default class my {
 
   static getLogManager(my_object) { return wx.getLogManager(my_object) }
 
-  static rsa() { return /* wx.esa(my_object) */ console.log('暂不支持') }
+  static rsa() { return /* wx.esa(my_object) */ console.warn('is not support') }
 
   // ///////////////// Canvas ///////////////////
   // eslint-disable-next-line complexity
@@ -712,9 +712,9 @@ export default class my {
 
   static offUserCaptureScreen(callback) { return wx.offUserCaptureScreen(callback) }
 
-  static watchShake() { return /* wx.watchShake */console.log('暂不支持') }
+  static watchShake() { return /* wx.watchShake */console.warn('is not support') }
 
-  static getServerTime() { return /* wx.getServerTime */console.log('暂不支持') }
+  static getServerTime() { return /* wx.getServerTime */console.warn('is not support') }
 
   //
   static getScreenBrightness(my_object) {
@@ -1786,7 +1786,7 @@ export default class my {
     return wx.showLoading(wx_object)
   }
 
-  static SDKVersion() { return console.log('不支持此功能') }
+  static SDKVersion() { return console.warn('不支持此功能') }
 
   static hideToast(my_object) { return wx.hideToast(my_object) }
 
