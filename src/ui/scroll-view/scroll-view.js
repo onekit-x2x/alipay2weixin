@@ -16,56 +16,53 @@ Component({
       type: Boolean,
       value: false
     },
-    UpperThreshold: {
+    upperThreshold: {
       type: Number,
       value: 50
     },
-    LowerThreshold: {
+    lowerThreshold: {
       type: Number,
       value: 50
     },
-    ScrollIntoView: {
+    scrollTop: {
+      type: Number,
+      value: 0
+    },
+    scrollLeft: {
+      type: Number,
+      value: 0
+    },
+    scrollIntoView: {
       type: String,
       value: ''
     },
-    ScrollTop: {
-      type: Number,
-      value: 0
-    },
-    ScrollLeft: {
-      type: Number,
-      value: 0
-    },
-    ScrollWithAnimation: {
+    scrollWithAnimation: {
       type: Boolean,
       value: false
+    },
+    //
+    scrollAnimationDuration: {
+      type: Number,
+      value: 0
     },
     EnableBackToTop: {
       type: Boolean,
       value: false
     },
+    trapScroll: {
+      type: Boolean,
+      value: false
+    },
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    on_toupper() {
+    scrollView_scrolltoupper() {
       this.triggerEvent('scrolltoupper', {})
     },
-    on_tolower() {
+    scrollView_scrolltolower() {
       this.triggerEvent('scrolltolower', {})
     },
-    on_scroll() {
-      this.triggerEvent('scroll', {})
+    scrollView_scroll(e) {
+      this.triggerEvent('scroll', e)
     }
-
   }
 })

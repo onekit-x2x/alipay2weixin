@@ -1,19 +1,21 @@
 <scroll-view
-class="onekit-scroll-view {{onekitClass}}"
-style="{{onekitStyle}};border: 2rpx solid red;"
-id="{{onekitId}}"
-scroll-y="{{scrollY}}"
-scroll-x="{{scrollX}}"
-upper-threshold="{{UpperThreshold}}"
-lower-threshold="{{LowerThreshold}}"
-scroll-into-view="{{ScrollIntoView}}"
-scroll-top="{{ScrollTop}}"
-scroll-left="{{ScrollLeft}}"
-scroll-with-animation="{{ScrollWithAnimation}}"
-enable-back-to-top ="{{EnableBackToTop}}"
-bindscrolltoupper="on_toupper"
-bindscrolltolower="on_tolower"
-bindscroll="on_scroll"
+  class="onekit-scroll-view {{onekitClass}}"
+  style="{{onekitStyle}}"
+  id="{{onekitId}}"
+
+  scroll-x="{{scrollX}}"
+  scroll-y="{{scrollY}}"
+  upper-threshold="{{upperThreshold}}"
+  lower-threshold="{{lowerThreshold}}"
+  scroll-top="{{scrollTop}}"
+  scroll-left="{{scrollLeft}}"
+  scroll-into-view="{{scrollIntoView}}"
+  scroll-with-animation="{{scrollWithAnimation}}"
+  enable-back-to-top="{{enableBackToTop}}"
+  
+  bindscrolltoupper="scrollView_scrolltoupper"
+  bindscrolltolower="scrollView_scrolltolower"
+  bindscroll="scrollView_scroll"
 >
 <slot/>
 </scroll-view>
