@@ -7,6 +7,9 @@ Component({
   options: {
     virtualHost: true
   },
+  data: {
+    Lines: null
+  },
   properties: {
     selectable: {
       type: Boolean,
@@ -20,19 +23,15 @@ Component({
       type: Boolean,
       value: false
     },
+    numberOfLines: {
+      type: Number,
+      value: null
+    }
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
+  attached() {
+    if (this.properties.numberOfLines >= 1) {
+      this.data.Lines = this.properties.numberOfLines
+    }
+    this.setData(this.data)
   }
 })
