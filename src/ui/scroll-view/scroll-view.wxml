@@ -1,6 +1,6 @@
 <scroll-view
   class="onekit-scroll-view {{onekitClass}}"
-  style="{{onekitStyle}}"
+  style="animation-duration:{{animationDuration}};{{onekitStyle}}"
   id="{{onekitId}}"
 
   scroll-x="{{scrollX}}"

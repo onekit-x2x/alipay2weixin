@@ -1,5 +1,5 @@
-/* eslint-disable max-len */
 /* eslint-disable guard-for-in */
+/* eslint-disable max-len */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
 import CanvasContext from './api/CanvasContext'

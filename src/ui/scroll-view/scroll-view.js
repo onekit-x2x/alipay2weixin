@@ -7,6 +7,9 @@ Component({
   options: {
     virtualHost: true
   },
+  data: {
+    animationDuration: 0
+  },
   properties: {
     scrollX: {
       type: Boolean,
@@ -40,7 +43,6 @@ Component({
       type: Boolean,
       value: false
     },
-    //
     scrollAnimationDuration: {
       type: Number,
       value: 0
@@ -49,10 +51,23 @@ Component({
       type: Boolean,
       value: false
     },
+    //
     trapScroll: {
       type: Boolean,
       value: false
     },
+  },
+  attached() {
+    if (this.properties.scrollWithAnimation) {
+      this.data.animationDuration = Math.round(this.properties.scrollAnimationDuration / 1000)
+    }
+    //
+    if (this.properties.scrollY) {
+      if (this.properties.upperThreshold === 0 && this.properties.lowerThreshold) {
+        this.data.scrollY = false
+      }
+    }
+    this.setData(this.data)
   },
   methods: {
     scrollView_scrolltoupper() {
