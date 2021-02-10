@@ -8,6 +8,7 @@ Component({
     virtualHost: true
   },
   properties: {
+    name: {type: String, value: ''},
     min: {type: String, value: 0},
     max: {type: Number, value: 100},
     step: {type: Number, value: 1},
@@ -16,27 +17,17 @@ Component({
     showValue: {type: Boolean, value: false},
     activeColor: {type: String, value: '#108ee9'},
     backgroundColor: {type: String, value: '#ddd'},
+    //
+    trackSize: {type: Number, value: 4},
     handleSize: {type: Number, value: 22},
     handleColor: {type: String, value: '#fff'},
-    name: {type: String, value: ''}
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    slider_change() {
-      this.triggerEvent('Change', {})
+    slider_change(e) {
+      this.triggerEvent('Change', e)
     },
-    slider_changing() {
-      this.triggerEvent('Changing', {})
+    slider_changing(e) {
+      this.triggerEvent('Changing', e)
     }
   }
 })
