@@ -3,7 +3,6 @@
     "button": "./ui/button/button",
     "contact-button": "./ui/contact-button/contact-button",
     "image": "./ui/image/image",
-    "input": "./ui/input/input",
     "lifestyle": "./ui/lifestyle/lifestyle",
     "lottie": "./ui/lottie/lottie",
     "map": "./ui/map/map",

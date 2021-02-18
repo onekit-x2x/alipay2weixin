@@ -7,7 +7,6 @@ Component({
   behaviors: [onekit_behavior, alipay_behavior],
   options: {
     virtualHost: true
-
   },
   data: {},
   props: {
