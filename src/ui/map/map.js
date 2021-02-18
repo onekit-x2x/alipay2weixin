@@ -65,7 +65,7 @@ Component({
     // this.mapCtx.gestureEnable({isGestureEnable:enableRotate});
     //     }
   },
-  didMount() {
+  attached() {
     this.mapCtx = my.createMapContext('map')
   },
 

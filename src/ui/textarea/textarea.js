@@ -23,8 +23,6 @@ Component({
     showCount: {type: Boolean, value: true},
     controlled: {type: Boolean, value: false}
   },
-  didMount() {
-  },
   methods: {
     textarea_focus(e) {
       this.triggerEvent('Focus', e.detail)
