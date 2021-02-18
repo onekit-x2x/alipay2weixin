@@ -7,32 +7,38 @@ Component({
   options: {
     virtualHost: true
   },
+  data: {
+    num: 0
+  },
   properties: {
-    value: {type: String},
     name: {type: String},
+    value: {type: String},
     placeholder: {type: String, value: ''},
     placeholderStyle: {type: String, value: ''},
     placeholderClass: {type: String, value: ''},
     disabled: {type: Boolean, value: false},
-    maxlength: {type: Number, value: '140'},
+    maxlength: {type: Number, value: 140},
     focus: {type: Boolean, value: false},
     autoHeight: {type: Boolean, value: false},
-
     showCount: {type: Boolean, value: true},
     controlled: {type: Boolean, value: false}
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
+  didMount() {
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-
+    textarea_focus(e) {
+      this.triggerEvent('Focus', e.detail)
+    },
+    textarea_blur(e) {
+      this.triggerEvent('Blur', e.detail)
+    },
+    textarea_input(e) {
+      this.data.num = e.detail.value.length
+      this.setData({num: this.data.num, value: e.detail.value})
+      this.triggerEvent('Input', e.detail)
+    },
+    textarea_confirm(e) {
+      this.triggerEvent('Confirm', e.detail)
+    },
   }
 })

@@ -1,17 +1,23 @@
 <textarea
-class="onekit-input {{onekitClass}}"
-style="{{onekitStyle}}"
-id="{{onekitId}}"
-name="{{name}}"
-value="{{value}}"
-placeholder="{{placeholder}}"
-placeholder-style="{{placeholderStyle}}"
-placeholder-class="{{placeholderClass}}"
-disabled="{{disabled}}"
-maxlength="{{maxlength}}"
-focus="{{focus}}"
-auto-height="{{autoHeight}}"
+  class="onekit-input {{onekitClass}}"
+  style="{{onekitStyle}}"
+  id="{{onekitId}}"
 
-show-count="{{showCount}}"
-controlled="{{controlled}}"
+  value="{{value}}"
+  placeholder="{{placeholder}}"
+  placeholder-style="{{placeholderStyle}}"
+  placeholder-class="{{placeholderClass}}"
+  disabled="{{disabled}}"
+  maxlength="{{maxlength}}"
+  focus="{{focus}}"
+  auto-height="{{autoHeight}}"
+
+  bindfocus="textarea_focus"
+  bindblur="textarea_blur"
+  bindinput="textarea_input"
+  bindconfirm="textarea_confirm"
 ></textarea>
+<view wx:if="{{showCount}}"
+  style="display:flex;justify-content:flex-end;color:#B3B3B3">
+  <text>{{num}}</text>/140
+</view>
