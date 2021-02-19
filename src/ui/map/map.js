@@ -1,9 +1,10 @@
 /* eslint-disable camelcase */
 import onekit_behavior from '../../behavior/onekit_behavior'
 import alipay_behavior from '../../behavior/alipay_behavior'
+import MapContext_behavior from '../../api/MapContext_behavior'
 
 Component({
-  behaviors: [onekit_behavior, alipay_behavior],
+  behaviors: [onekit_behavior, alipay_behavior, MapContext_behavior],
   options: {
     virtualHost: true
   },
@@ -30,7 +31,7 @@ Component({
     setting: {type: Object}
   },
   attached() {
-    // this.mapCtx = wx.createMapContext('map')
+    this.mapCtx = wx.createMapContext('onekit-map')
   },
 
   methods: {
