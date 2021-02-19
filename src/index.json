@@ -2,7 +2,6 @@
   "usingComponents": {
     "button": "./ui/button/button",
     "contact-button": "./ui/contact-button/contact-button",
-    "image": "./ui/image/image",
     "lifestyle": "./ui/lifestyle/lifestyle",
     "lottie": "./ui/lottie/lottie",
     "map": "./ui/map/map",
@@ -10,7 +9,6 @@
     "scroll-view": "./ui/scroll-view/scroll-view",
     "slider": "./ui/slider/slider",
     "text": "./ui/text/text",
-    "textarea": "./ui/textarea/textarea",
-    "video": "./ui/video/video"
+    "textarea": "./ui/textarea/textarea"
   }
 }

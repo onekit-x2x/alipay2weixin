@@ -77,7 +77,7 @@ Component({
       this.triggerEvent('scrolltolower', {})
     },
     scrollView_scroll(e) {
-      this.triggerEvent('scroll', e)
+      this.triggerEvent('scroll', e.detail)
     }
   }
 })

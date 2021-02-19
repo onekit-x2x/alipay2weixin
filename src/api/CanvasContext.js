@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-// import onekit from '../js/onekit'
 
 export default class CanvasContext {
   constructor(weixinCanvasContext) {

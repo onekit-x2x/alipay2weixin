@@ -24,10 +24,10 @@ Component({
   },
   methods: {
     slider_change(e) {
-      this.triggerEvent('Change', e)
+      this.triggerEvent('Change', e.detail)
     },
     slider_changing(e) {
-      this.triggerEvent('Changing', e)
+      this.triggerEvent('Changing', e.detail)
     }
   }
 })

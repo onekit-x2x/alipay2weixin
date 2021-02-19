@@ -1,4 +1,8 @@
-<map id="map" style="{{style}}"
+<map 
+  class="onekit-map {{onekitClass}}"
+  style="{{onekitStyle}}"
+  id="{{onekitId}}"
+
   longitude="{{longitude}}"
   latitude="{{latitude}}"
   scale="{{scale}}"
@@ -6,7 +10,16 @@
   polyline="{{polyline}}"
   circles="{{circles}}"
   controls="{{controls}}"
-  polygon="{{polygon}}"
-  include-points="{{include-points}}"
-  show-location="{{show-location}}"
+  include-points="{{includePoints}}"
+  show-location="{{showLocation}}"
+  polygons="{{polygon}}"
+  rotate="{{rotate}}"
+  skew="{{skew}}"
+  setting="{{setting}}"
+
+  bindtap="map_tap"
+  bindmarkertap="map_markertap"
+  bindcontroltap="map_controltap"
+  bindcallouttap="map_callouttap"
+  bindregionchange="map_regionchange"
 ></map>
